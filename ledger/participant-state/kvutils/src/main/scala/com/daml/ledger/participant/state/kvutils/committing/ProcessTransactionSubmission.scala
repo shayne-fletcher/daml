@@ -54,8 +54,18 @@ private[kvutils] class ProcessTransactionSubmission(
       participantId: ParticipantId,
       txEntry: DamlTransactionEntry,
       inputState: DamlStateMap,
+      validateModel: Boolean,
   ): (DamlLogEntry, Map[DamlStateKey, DamlStateValue]) = Metrics.runTimer.time { () =>
     val transactionEntry = TransactionEntry(txEntry)
+    val validationStep =
+      if (validateModel) {
+        "Validate Model Conformance" -> timed(
+          Metrics.interpretTimer,
+          validateModelConformance(engine, recordTime, participantId, transactionEntry, inputState),
+        )
+      } else {
+        "NOOP Validation" -> Commit.pass
+      }
     runSequence(
       inputState = inputState,
       "Authorize submitter" -> authorizeSubmitter(recordTime, participantId, transactionEntry),
@@ -65,10 +75,7 @@ private[kvutils] class ProcessTransactionSubmission(
       "Validate Ledger Time" -> validateLedgerTime(recordTime, transactionEntry, inputState),
       "Validate Contract Key Uniqueness" ->
         validateContractKeyUniqueness(recordTime, transactionEntry),
-      "Validate Model Conformance" -> timed(
-        Metrics.interpretTimer,
-        validateModelConformance(engine, recordTime, participantId, transactionEntry, inputState),
-      ),
+      validationStep,
       "Authorize and build result" ->
         authorizeAndBlind(recordTime, transactionEntry).flatMap(
           buildFinalResult(entryId, recordTime, transactionEntry))
