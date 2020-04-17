@@ -154,7 +154,6 @@ class Context(val contextId: Context.ContextId) {
     // definition out rather than rebuilding the map.
     Speedy.Machine
       .build(
-        checkSubmitterInMaintainers = false,
         sexpr = defn,
         compiledPackages = PureCompiledPackages(allPackages, defns).right.get,
         submissionTime,

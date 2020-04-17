@@ -487,7 +487,6 @@ class EngineTest extends WordSpec with Matchers with EitherValues with BazelRunf
             engine
               .interpretCommands(
                 validating = false,
-                checkSubmitterInMaintainers = true,
                 submitters = Set(party),
                 commands = r,
                 ledgerTime = let,
@@ -590,7 +589,6 @@ class EngineTest extends WordSpec with Matchers with EitherValues with BazelRunf
             engine
               .interpretCommands(
                 validating = false,
-                checkSubmitterInMaintainers = true,
                 submitters = Set(alice),
                 commands = r,
                 ledgerTime = let,
@@ -665,7 +663,6 @@ class EngineTest extends WordSpec with Matchers with EitherValues with BazelRunf
             engine
               .interpretCommands(
                 validating = false,
-                checkSubmitterInMaintainers = true,
                 submitters = Set(party),
                 commands = r,
                 ledgerTime = let,
@@ -892,7 +889,6 @@ class EngineTest extends WordSpec with Matchers with EitherValues with BazelRunf
     val Right((rtx, _)) = engine
       .interpretCommands(
         validating = false,
-        checkSubmitterInMaintainers = true,
         submitters = Set(bob),
         commands = cmds,
         ledgerTime = let,
@@ -972,7 +968,6 @@ class EngineTest extends WordSpec with Matchers with EitherValues with BazelRunf
         engine
           .interpretCommands(
             validating = false,
-            checkSubmitterInMaintainers = true,
             submitters = Set(bob),
             commands = cmds,
             ledgerTime = let,
@@ -1109,7 +1104,6 @@ class EngineTest extends WordSpec with Matchers with EitherValues with BazelRunf
             engine
               .interpretCommands(
                 validating = false,
-                checkSubmitterInMaintainers = true,
                 submitters = Set(exerciseActor),
                 commands = r,
                 ledgerTime = let,
@@ -1342,7 +1336,14 @@ class EngineTest extends WordSpec with Matchers with EitherValues with BazelRunf
       val cmd = speedy.Command.Fetch(BasicTests_WithKey, SValue.SContractId(fetchedCid))
 
       val Right((tx, _)) = engine
-        .interpretCommands(false, false, Set(alice), ImmArray(cmd), now, now, InitialSeeding.NoSeed)
+        .interpretCommands(
+          validating = false,
+          submitters = Set(alice),
+          commands = ImmArray(cmd),
+          ledgerTime = now,
+          submissionTime = now,
+          seeding = InitialSeeding.NoSeed,
+        )
         .consume(lookupContractMap.get, lookupPackage, lookupKey)
 
       tx.nodes.values.headOption match {
@@ -1396,7 +1397,14 @@ class EngineTest extends WordSpec with Matchers with EitherValues with BazelRunf
         .consume(lookupContractMap.get, lookupPackage, lookupKey)
 
       val Right((tx, _)) = engine
-        .interpretCommands(false, false, Set(alice), cmds, now, now, InitialSeeding.NoSeed)
+        .interpretCommands(
+          validating = false,
+          submitters = Set(alice),
+          commands = cmds,
+          ledgerTime = now,
+          submissionTime = now,
+          seeding = InitialSeeding.NoSeed,
+        )
         .consume(lookupContractMap.get, lookupPackage, lookupKey)
 
       tx.nodes.values.collectFirst {

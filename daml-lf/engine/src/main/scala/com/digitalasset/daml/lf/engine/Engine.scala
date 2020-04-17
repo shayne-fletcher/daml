@@ -85,33 +85,28 @@ final class Engine {
     preprocessor
       .preprocessCommands(cmds.commands)
       .flatMap { processedCmds =>
-        ShouldCheckSubmitterInMaintainers(compiledPackages, cmds).flatMap {
-          checkSubmitterInMaintainers =>
-            interpretCommands(
-              validating = false,
-              checkSubmitterInMaintainers = checkSubmitterInMaintainers,
-              submitters = Set(cmds.submitter),
-              commands = processedCmds,
-              ledgerTime = cmds.ledgerEffectiveTime,
-              submissionTime = submissionTime,
-              seeding = Engine.initialSeeding(submissionSeed, participantId, submissionTime),
-            ) map {
-              case (tx, meta) =>
-                // Annotate the transaction with the package dependencies. Since
-                // all commands are actions on a contract template, with a fully typed
-                // argument, we only need to consider the templates mentioned in the command
-                // to compute the full dependencies.
-                val deps = processedCmds.foldLeft(Set.empty[PackageId]) { (pkgIds, cmd) =>
-                  val pkgId = cmd.templateId.packageId
-                  val transitiveDeps =
-                    compiledPackages
-                      .getPackageDependencies(pkgId)
-                      .getOrElse(
-                        sys.error(s"INTERNAL ERROR: Missing dependencies of package $pkgId"))
-                  (pkgIds + pkgId) union transitiveDeps
-                }
-                tx -> meta.copy(submissionSeed = submissionSeed, usedPackages = deps)
+        interpretCommands(
+          validating = false,
+          submitters = Set(cmds.submitter),
+          commands = processedCmds,
+          ledgerTime = cmds.ledgerEffectiveTime,
+          submissionTime = submissionTime,
+          seeding = Engine.initialSeeding(submissionSeed, participantId, submissionTime),
+        ) map {
+          case (tx, meta) =>
+            // Annotate the transaction with the package dependencies. Since
+            // all commands are actions on a contract template, with a fully typed
+            // argument, we only need to consider the templates mentioned in the command
+            // to compute the full dependencies.
+            val deps = processedCmds.foldLeft(Set.empty[PackageId]) { (pkgIds, cmd) =>
+              val pkgId = cmd.templateId.packageId
+              val transitiveDeps =
+                compiledPackages
+                  .getPackageDependencies(pkgId)
+                  .getOrElse(sys.error(s"INTERNAL ERROR: Missing dependencies of package $pkgId"))
+              (pkgIds + pkgId) union transitiveDeps
             }
+            tx -> meta.copy(submissionSeed = submissionSeed, usedPackages = deps)
         }
       }
   }
@@ -137,13 +132,9 @@ final class Engine {
   ): Result[(Tx.Transaction, Tx.Metadata)] =
     for {
       command <- preprocessor.translateNode(node)
-      checkSubmitterInMaintainers <- ShouldCheckSubmitterInMaintainers(
-        compiledPackages,
-        ImmArray(command.templateId))
       // reinterpret is never used for submission, only for validation.
       result <- interpretCommands(
         validating = true,
-        checkSubmitterInMaintainers = checkSubmitterInMaintainers,
         submitters = submitters,
         commands = ImmArray(command),
         ledgerTime = ledgerEffectiveTime,
@@ -202,12 +193,8 @@ final class Engine {
       submitters = submittersOpt.getOrElse(Set.empty)
 
       commands <- preprocessor.translateTransactionRoots(tx)
-      checkSubmitterInMaintainers <- ShouldCheckSubmitterInMaintainers(
-        compiledPackages,
-        commands.map(_._2.templateId))
       result <- interpretCommands(
         validating = true,
-        checkSubmitterInMaintainers = checkSubmitterInMaintainers,
         submitters = submitters,
         commands = commands.map(_._2),
         ledgerTime = ledgerEffectiveTime,
@@ -235,7 +222,6 @@ final class Engine {
   private[engine] def interpretCommands(
       validating: Boolean,
       /* See documentation for `Speedy.Machine` for the meaning of this field */
-      checkSubmitterInMaintainers: Boolean,
       submitters: Set[Party],
       commands: ImmArray[SpeedyCommand],
       ledgerTime: Time.Timestamp,
@@ -244,7 +230,6 @@ final class Engine {
   ): Result[(Tx.Transaction, Tx.Metadata)] = {
     val machine = Machine
       .build(
-        checkSubmitterInMaintainers = checkSubmitterInMaintainers,
         sexpr = Compiler(compiledPackages.packages).compile(commands),
         compiledPackages = compiledPackages,
         submissionTime = submissionTime,

@@ -138,10 +138,9 @@ object Trigger extends StrictLogging {
     )
     val machine = Speedy.Machine.fromSExpr(
       sexpr = heartbeat,
-      checkSubmitterInMaintainers = false,
       compiledPackages = compiledPackages,
       submissionTime = Timestamp.now(),
-      seeds = InitialSeeding.NoSeed,
+      seeding = InitialSeeding.NoSeed,
     )
     Machine.stepToValue(machine)
     machine.toSValue match {
@@ -162,10 +161,9 @@ object Trigger extends StrictLogging {
     val machine =
       Speedy.Machine.fromSExpr(
         sexpr = registeredTemplates,
-        checkSubmitterInMaintainers = false,
         compiledPackages = compiledPackages,
         submissionTime = Timestamp.now(),
-        seeds = InitialSeeding.NoSeed,
+        seeding = InitialSeeding.NoSeed,
       )
     Machine.stepToValue(machine)
     machine.toSValue match {
@@ -317,10 +315,9 @@ class Runner(
 
     var machine = Speedy.Machine.fromSExpr(
       sexpr = null,
-      checkSubmitterInMaintainers = false,
       compiledPackages = compiledPackages,
       submissionTime = Timestamp.now(),
-      seeds = InitialSeeding.NoSeed
+      seeding = InitialSeeding.NoSeed
     )
     val createdExpr: SExpr = SEValue(converter.fromACS(acs) match {
       case Left(err) => throw new ConverterException(err)
