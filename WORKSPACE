@@ -530,6 +530,19 @@ load("//:bazel-haskell-deps.bzl", "daml_haskell_deps")
 daml_haskell_deps()
 
 load("@rules_haskell//tools:repositories.bzl", "rules_haskell_worker_dependencies")
+load("//bazel_tools:daml_sdk.bzl", "daml_sdk")
+
+daml_sdk(
+    name = "daml-sdk-1.0.0",
+    sha256 = "ee7e2f50394d44fb3490068de64d37f4f87534e802717bd7e07e8767df2e4e05",
+    version = "1.0.0",
+)
+
+daml_sdk(
+    name = "daml-sdk-0.13.55",
+    sha256 = "42598c896aedddfced38c6a824d0db315f53a743d7f1b9dcbc7ccba2a79a7955",
+    version = "0.13.55",
+)
 
 # We don't use the worker mode, but this is required for bazel query to function.
 # Call this after `daml_haskell_deps` to ensure that the right `stack` is used.

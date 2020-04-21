@@ -1,0 +1,38 @@
+# Copyright (c) 2020 Digital Asset (Switzerland) GmbH and/or its affiliates. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+
+genrule(
+    name = "sdk-1.0.0",
+    outs = ["sdk-1.0.0.dar"],
+    cmd = """
+DIR=$$(mktemp -d)
+trap "{ rm -rf $$DIR; }" EXIT
+cat <<EOF > $$DIR/daml.yaml
+sdk-version: 1.0.0
+name: foobar
+version: 0.0.1
+source: .
+dependencies: [daml-stdlib, daml-prim]
+EOF
+$(location @daml-sdk-1.0.0//:sdk/bin/daml) build --project-root $$DIR -o $$PWD/$(location :sdk-1.0.0.dar)
+""",
+    tools = ["@daml-sdk-1.0.0//:sdk/bin/daml"],
+)
+
+genrule(
+    name = "sdk-0.13.55",
+    outs = ["sdk-0.13.55.dar"],
+    cmd = """
+DIR=$$(mktemp -d)
+trap "{ rm -rf $$DIR; }" EXIT
+cat <<EOF > $$DIR/daml.yaml
+sdk-version: 0.13.55
+name: foobar
+version: 0.0.1
+source: .
+dependencies: [daml-stdlib, daml-prim]
+EOF
+$(location @daml-sdk-0.13.55//:sdk/bin/daml) build --project-root $$DIR -o $$PWD/$(location :sdk-0.13.55.dar)
+""",
+    tools = ["@daml-sdk-0.13.55//:sdk/bin/daml"],
+)
