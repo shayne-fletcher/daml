@@ -9,6 +9,15 @@ def _daml_sdk_impl(ctx):
         sha256 = ctx.attr.sha256,
         stripPrefix = "sdk-{}".format(ctx.attr.version),
     )
+    ctx.download(
+        output = "ledger-api-test-tool.jar",
+        url = "https://repo1.maven.org/maven2/com/daml/ledger-api-test-tool/{}/ledger-api-test-tool-{}.jar".format(ctx.attr.version, ctx.attr.version),
+        sha256 = ctx.attr.test_tool_sha256,
+    )
+    ctx.extract(
+        "ledger-api-test-tool.jar",
+        output = "extracted-test-tool",
+    )
     ps_result = ctx.execute(
         ["extracted-sdk/daml/daml", "install", "extracted-sdk", "--install-assistant=no"],
         environment = {
@@ -31,15 +40,57 @@ update-check: never
 """,
     )
     ctx.file(
+        "ledger-api-test-tool.sh",
+        content =
+            """#!/usr/bin/env bash
+# Copy-pasted from the Bazel Bash runfiles library v2.
+set -uox pipefail; f=bazel_tools/tools/bash/runfiles/runfiles.bash
+source "${{RUNFILES_DIR:-/dev/null}}/$f" 2>/dev/null || \
+  source "$(grep -sm1 "^$f " "${{RUNFILES_MANIFEST_FILE:-/dev/null}}" | cut -f2- -d' ')" 2>/dev/null || \
+  source "$0.runfiles/$f" 2>/dev/null || \
+  source "$(grep -sm1 "^$f " "$0.runfiles_manifest" | cut -f2- -d' ')" 2>/dev/null || \
+  source "$(grep -sm1 "^$f " "$0.exe.runfiles_manifest" | cut -f2- -d' ')" 2>/dev/null || \
+  {{ echo>&2 "ERROR: cannot find $f"; exit 1; }}; f=; set -e
+$JAVA_HOME/bin/java -jar $(rlocation daml-sdk-{}/ledger-api-test-tool.jar) $@
+""".format(ctx.attr.version),
+    )
+    ctx.file(
+        "daml.sh",
+        content =
+            """#!/usr/bin/env bash
+export PATH=$JAVA_HOME/bin:$PATH
+# Copy-pasted from the Bazel Bash runfiles library v2.
+set -uo pipefail; f=bazel_tools/tools/bash/runfiles/runfiles.bash
+source "${{RUNFILES_DIR:-/dev/null}}/$f" 2>/dev/null || \
+  source "$(grep -sm1 "^$f " "${{RUNFILES_MANIFEST_FILE:-/dev/null}}" | cut -f2- -d' ')" 2>/dev/null || \
+  source "$0.runfiles/$f" 2>/dev/null || \
+  source "$(grep -sm1 "^$f " "$0.runfiles_manifest" | cut -f2- -d' ')" 2>/dev/null || \
+  source "$(grep -sm1 "^$f " "$0.exe.runfiles_manifest" | cut -f2- -d' ')" 2>/dev/null || \
+  {{ echo>&2 "ERROR: cannot find $f"; exit 1; }}; f=; set -e
+$(rlocation daml-sdk-{}/sdk/bin/daml) $@
+""".format(ctx.attr.version),
+    )
+    ctx.file(
         "BUILD",
         content =
             """
 package(default_visibility = ["//visibility:public"])
-filegroup(
-  name = "all",
-  srcs = ["sdk/**"],
+sh_binary(
+  name = "ledger-api-test-tool",
+  srcs = [":ledger-api-test-tool.sh"],
+  data = [":ledger-api-test-tool.jar"],
+  deps = ["@bazel_tools//tools/bash/runfiles"],
 )
-exports_files(glob(["sdk/**"]))
+sh_binary(
+  name = "daml",
+  srcs = [":daml.sh"],
+  data = [":sdk/bin/daml"],
+  deps = ["@bazel_tools//tools/bash/runfiles"],
+)
+filegroup(
+    name = "dar-files",
+    srcs = glob(["extracted-test-tool/ledger/test-common/**"]),
+)
 """,
     )
     return None
@@ -49,5 +100,6 @@ daml_sdk = repository_rule(
     attrs = {
         "version": attr.string(mandatory = True),
         "sha256": attr.string(mandatory = True),
+        "test_tool_sha256": attr.string(mandatory = True),
     },
 )

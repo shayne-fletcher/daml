@@ -535,13 +535,15 @@ load("//bazel_tools:daml_sdk.bzl", "daml_sdk")
 daml_sdk(
     name = "daml-sdk-1.0.0",
     sha256 = "ee7e2f50394d44fb3490068de64d37f4f87534e802717bd7e07e8767df2e4e05",
+    test_tool_sha256 = "cf66efafd9490e1256e825f377b208b8ae90151f56e411b596fbaaef91353e14",
     version = "1.0.0",
 )
 
 daml_sdk(
-    name = "daml-sdk-0.13.55",
-    sha256 = "42598c896aedddfced38c6a824d0db315f53a743d7f1b9dcbc7ccba2a79a7955",
-    version = "0.13.55",
+    name = "daml-sdk-1.0.1-snapshot.20200417.3908.1.722bac90",
+    sha256 = "aaf832ceda1a66a8469460d5a4b6c14f681ce692d4e9ef6010896febbaf4b6e1",
+    test_tool_sha256 = "762cd4836a8359dca0fb3271ba2e1d0629138f7d8d914298324418a174c5d22a",
+    version = "1.0.1-snapshot.20200417.3908.1.722bac90",
 )
 
 # We don't use the worker mode, but this is required for bazel query to function.
