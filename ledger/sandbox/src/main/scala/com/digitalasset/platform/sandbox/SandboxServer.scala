@@ -296,7 +296,6 @@ final class SandboxServer(
                 // unnecessary and bad for performance.
                 implicitPartyAllocation = false,
               ),
-              submissionConfig = config.submissionConfig,
               optTimeServiceBackend = timeServiceBackendO,
               metrics = metrics,
               healthChecks = healthChecks,

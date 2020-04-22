@@ -16,7 +16,6 @@ import com.daml.platform.configuration.{
   CommandConfiguration,
   LedgerConfiguration,
   PartyConfiguration,
-  SubmissionConfiguration
 }
 import com.daml.platform.indexer.{IndexerConfig, IndexerStartupMode}
 import com.daml.resources.ResourceOwner
@@ -62,9 +61,6 @@ trait ConfigProvider[ExtraConfig] {
 
   def partyConfig(config: Config[ExtraConfig]): PartyConfiguration =
     PartyConfiguration.default
-
-  def submissionConfig(config: Config[ExtraConfig]): SubmissionConfiguration =
-    SubmissionConfiguration.default
 
   def ledgerConfig(config: Config[ExtraConfig]): LedgerConfiguration =
     LedgerConfiguration.default.copy(
