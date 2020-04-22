@@ -584,4 +584,7 @@ class InMemoryLedger(
         ()
       }
     }
+
+  // Old sandbox does not support pruning
+  override def pruneByOffset(pruneUpToInclusive: Offset): Future[Unit] = ???
 }

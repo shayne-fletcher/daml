@@ -4,7 +4,7 @@
 package com.daml.ledger.participant.state.kvutils.api
 
 import java.util.UUID
-import java.util.concurrent.CompletionStage
+import java.util.concurrent.{CompletableFuture, CompletionStage}
 
 import com.codahale.metrics.MetricRegistry
 import com.daml.ledger.participant.state.kvutils.DamlKvutils.DamlSubmission
@@ -72,6 +72,11 @@ class KeyValueParticipantStateWriter(writer: LedgerWriter, metricRegistry: Metri
         writer.participantId)
     commit(submissionId, submission)
   }
+
+  override def pruneByTime(
+      before: Time.Timestamp,
+      submissionId: SubmissionId): CompletionStage[Option[ParticipantPruned]] =
+    CompletableFuture.completedFuture(None)
 
   override def currentHealth(): HealthStatus = writer.currentHealth()
 

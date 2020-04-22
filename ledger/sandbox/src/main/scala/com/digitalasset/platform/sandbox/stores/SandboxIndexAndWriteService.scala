@@ -118,6 +118,8 @@ object SandboxIndexAndWriteService {
           .single(LedgerConfiguration(initialConfig.maxDeduplicationTime))
           .concat(Source.future(Promise[LedgerConfiguration]().future)) // we should keep the stream open!
     }
+    implicit val executionContext
+      : ExecutionContext = mat.executionContext // TODO: Okay to use materializer EC?
     val writeSvc = new LedgerBackedWriteService(ledger, timeProvider)
 
     for {
@@ -166,7 +168,9 @@ object SandboxIndexAndWriteService {
   }
 }
 
-class LedgerBackedWriteService(ledger: Ledger, timeProvider: TimeProvider) extends WriteService {
+class LedgerBackedWriteService(ledger: Ledger, timeProvider: TimeProvider)(
+    implicit executionContext: ExecutionContext)
+    extends WriteService {
 
   override def currentHealth(): HealthStatus = ledger.currentHealth()
 
@@ -199,4 +203,10 @@ class LedgerBackedWriteService(ledger: Ledger, timeProvider: TimeProvider) exten
       submissionId: SubmissionId,
       config: Configuration): CompletionStage[SubmissionResult] =
     FutureConverters.toJava(ledger.publishConfiguration(maxRecordTime, submissionId, config))
+
+  // WriteParticipantPruningService - old Sandbox does not support pruning
+  override def pruneByTime(
+      pruneUpToInclusive: Time.Timestamp,
+      submissionId: SubmissionId): CompletionStage[Option[ParticipantPruned]] =
+    FutureConverters.toJava(Future.successful(None))
 }

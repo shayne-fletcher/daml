@@ -26,7 +26,7 @@ import com.daml.platform.store.entries.{
   ConfigurationEntry,
   LedgerEntry,
   PackageLedgerEntry,
-  PartyLedgerEntry,
+  PartyLedgerEntry
 }
 import com.daml.platform.store.PersistenceEntry
 
@@ -56,6 +56,7 @@ class MeteredLedgerReadDao(ledgerDao: LedgerReadDao, metrics: MetricRegistry)
       metrics.timer(prefix :+ "remove_expired_deduplication_data")
     val stopDeduplicatingCommand: Timer =
       metrics.timer(prefix :+ "stop_deduplicating_command")
+    val pruneByOffset: Timer = metrics.timer(prefix :+ "prune_by_offset")
   }
 
   override def maxConcurrentConnections: Int = ledgerDao.maxConcurrentConnections
@@ -152,6 +153,9 @@ class MeteredLedgerReadDao(ledgerDao: LedgerReadDao, metrics: MetricRegistry)
     timedFuture(
       Metrics.stopDeduplicatingCommand,
       ledgerDao.stopDeduplicatingCommand(commandId, submitter))
+
+  override def pruneByOffset(pruneUpToInclusive: Offset): Future[Unit] =
+    timedFuture(Metrics.pruneByOffset, ledgerDao.pruneByOffset(pruneUpToInclusive))
 }
 
 class MeteredLedgerDao(ledgerDao: LedgerDao, metrics: MetricRegistry)

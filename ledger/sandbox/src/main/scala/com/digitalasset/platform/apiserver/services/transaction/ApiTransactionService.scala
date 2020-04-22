@@ -28,6 +28,7 @@ import com.daml.platform.events.EventIdFormatter.TransactionIdWithIndex
 import com.daml.platform.server.api.services.domain.TransactionService
 import com.daml.platform.server.api.services.grpc.GrpcTransactionService
 import com.daml.platform.server.api.validation.ErrorFactories
+import com.daml.platform.store.PrunedLedgerOffsetNoLongerAvailable
 import io.grpc._
 import scalaz.syntax.tag._
 
@@ -75,7 +76,11 @@ final class ApiTransactionService private (
       logger.debug(s"Received request for transaction subscription $subscriptionId: $request")
       transactionsService
         .transactions(request.startExclusive, request.endInclusive, request.filter, request.verbose)
-        .via(logger.logErrorsOnStream)
+        .via(logger.logErrorsOnStreamCustom {
+          case t @ PrunedLedgerOffsetNoLongerAvailable(message) =>
+            logger.info(message)
+            t
+        })
     }
 
   override def getTransactionTrees(
@@ -93,7 +98,11 @@ final class ApiTransactionService private (
           TransactionFilter(request.parties.map(p => p -> Filters.noFilter).toMap),
           request.verbose
         )
-        .via(logger.logErrorsOnStream)
+        .via(logger.logErrorsOnStreamCustom {
+          case t @ PrunedLedgerOffsetNoLongerAvailable(message) =>
+            logger.info(message)
+            t
+        })
     }
 
   override def getTransactionByEventId(

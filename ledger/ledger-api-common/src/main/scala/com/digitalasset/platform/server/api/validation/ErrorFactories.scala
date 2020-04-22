@@ -28,6 +28,10 @@ trait ErrorFactories {
   def notFound(target: String): StatusRuntimeException =
     grpcError(Status.NOT_FOUND.withDescription(s"$target not found."))
 
+  def participantPruningPointNotFound(message: String): StatusRuntimeException =
+    grpcError(
+      Status.NOT_FOUND.withDescription(s"Could not find participant pruning point: $message."))
+
   def internal(description: String): StatusRuntimeException =
     grpcError(Status.INTERNAL.withDescription(description))
 

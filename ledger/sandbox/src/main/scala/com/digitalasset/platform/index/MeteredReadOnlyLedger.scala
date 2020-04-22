@@ -27,14 +27,14 @@ import com.daml.ledger.api.v1.transaction_service.{
   GetFlatTransactionResponse,
   GetTransactionResponse,
   GetTransactionTreesResponse,
-  GetTransactionsResponse,
+  GetTransactionsResponse
 }
 import com.daml.platform.metrics.timedFuture
 import com.daml.platform.store.entries.{
   ConfigurationEntry,
   LedgerEntry,
   PackageLedgerEntry,
-  PartyLedgerEntry,
+  PartyLedgerEntry
 }
 import com.daml.platform.store.ReadOnlyLedger
 
@@ -62,6 +62,7 @@ class MeteredReadOnlyLedger(ledger: ReadOnlyLedger, metrics: MetricRegistry)
       metrics.timer(prefix :+ "remove_expired_deduplication_data")
     val stopDeduplicatingCommand: Timer =
       metrics.timer(prefix :+ "stop_deduplicating_command")
+    val pruneByOffset: Timer = metrics.timer(prefix :+ "prune_by_offset")
   }
 
   override def ledgerId: LedgerId = ledger.ledgerId
@@ -189,6 +190,9 @@ class MeteredReadOnlyLedger(ledger: ReadOnlyLedger, metrics: MetricRegistry)
     timedFuture(
       Metrics.stopDeduplicatingCommand,
       ledger.stopDeduplicatingCommand(commandId, submitter))
+
+  override def pruneByOffset(pruneUpToInclusive: Offset): Future[Unit] =
+    timedFuture(Metrics.pruneByOffset, ledger.pruneByOffset(pruneUpToInclusive))
 }
 
 object MeteredReadOnlyLedger {

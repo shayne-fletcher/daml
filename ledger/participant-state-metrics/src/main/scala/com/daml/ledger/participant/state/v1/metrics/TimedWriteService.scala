@@ -9,6 +9,7 @@ import com.codahale.metrics.MetricRegistry
 import com.daml.ledger.participant.state.metrics.{MetricName, Metrics}
 import com.daml.ledger.participant.state.v1.{
   Configuration,
+  ParticipantPruned,
   Party,
   SubmissionId,
   SubmissionResult,
@@ -52,6 +53,11 @@ final class TimedWriteService(delegate: WriteService, metrics: MetricRegistry, p
       config: Configuration
   ): CompletionStage[SubmissionResult] =
     time("submit_configuration", delegate.submitConfiguration(maxRecordTime, submissionId, config))
+
+  override def pruneByTime(
+      before: Time.Timestamp,
+      submissionId: SubmissionId): CompletionStage[Option[ParticipantPruned]] =
+    time("prune_by_time", delegate.pruneByTime(before, submissionId))
 
   override def currentHealth(): HealthStatus =
     delegate.currentHealth()
