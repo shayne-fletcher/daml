@@ -33,17 +33,17 @@ da_scala_binary(
 da_scala_test(
   name = "akka-quickstart-scala-test",
   srcs = glob(["src/test/scala/**/*.scala"]),
+  runtime_deps = [
+    "@maven//:ch_qos_logback_logback_classic",
+  ],
   deps = [
     "@maven//:com_typesafe_akka_akka_actor_testkit_typed_2_12",
-    "@maven//:org_scala_lang_scala_library",
     "@maven//:com_typesafe_akka_akka_actor_typed_2_12",
-    "@maven//:com_typesafe_akka_akka_slf4j_2_12",
-    "@maven//:com_typesafe_akka_akka_testkit_2_12",
-    "@maven//:com_github_ghik_silencer_lib_2_12",
-    "@maven//:ch_qos_logback_logback_classic",
+    "@maven//:com_typesafe_akka_akka_actor_2_12",
+    "@maven//:com_typesafe_config",
+    "@maven//:org_scala_lang_scala_library",
     "@maven//:junit_junit",
     "@maven//:org_scalatest_scalatest_2_12",
-    "@maven//:org_scalatestplus_junit_4_12_2_12",
     ":akka-quickstart-scala-lib",
   ],  
 )
