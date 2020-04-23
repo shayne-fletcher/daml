@@ -1219,6 +1219,36 @@
                 "sha256": "3c983efd496f95ea5382ca014f96613786826136e0ce13d5c1cbc3097ea92ca0"
             },
             {
+                "coord": "com.github.luben:zstd-jni:1.4.3-1",
+                "file": "v1/https/repo1.maven.org/maven2/com/github/luben/zstd-jni/1.4.3-1/zstd-jni-1.4.3-1.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "exclusions": [
+                    "com.fasterxml.jackson.core:jackson-databind",
+                    "com.fasterxml.jackson.module:jackson-module-scala"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/github/luben/zstd-jni/1.4.3-1/zstd-jni-1.4.3-1.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/github/luben/zstd-jni/1.4.3-1/zstd-jni-1.4.3-1.jar"
+                ],
+                "sha256": "8370149f5bd16a83d27240a8ce5a64204f3c70647ed180801dcf95f7be27ef87"
+            },
+            {
+                "coord": "com.github.luben:zstd-jni:jar:sources:1.4.3-1",
+                "file": "v1/https/repo1.maven.org/maven2/com/github/luben/zstd-jni/1.4.3-1/zstd-jni-1.4.3-1-sources.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "exclusions": [
+                    "com.fasterxml.jackson.core:jackson-databind",
+                    "com.fasterxml.jackson.module:jackson-module-scala"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/github/luben/zstd-jni/1.4.3-1/zstd-jni-1.4.3-1-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/github/luben/zstd-jni/1.4.3-1/zstd-jni-1.4.3-1-sources.jar"
+                ],
+                "sha256": "8c695df6b69bf6ae43027083ecde6931a20e78b9542f508b7e0f5e5f7ad7e335"
+            },
+            {
                 "coord": "com.github.mpilquist:simulacrum_2.12:0.10.0",
                 "file": "v1/https/repo1.maven.org/maven2/com/github/mpilquist/simulacrum_2.12/0.10.0/simulacrum_2.12-0.10.0.jar",
                 "directDependencies": [
@@ -1743,6 +1773,44 @@
                 "sha256": "fca88125d94f5dd732c9287c82b8052a8e3efce048e7ba2bbb6acd154d520693"
             },
             {
+                "coord": "com.iheart:ficus_2.12:1.4.7",
+                "file": "v1/https/repo1.maven.org/maven2/com/iheart/ficus_2.12/1.4.7/ficus_2.12-1.4.7.jar",
+                "directDependencies": [
+                    "com.typesafe:config:1.4.0",
+                    "org.scala-lang:scala-library:2.12.10",
+                    "org.typelevel:macro-compat_2.12:1.1.1"
+                ],
+                "dependencies": [
+                    "com.typesafe:config:1.4.0",
+                    "org.scala-lang:scala-library:2.12.10",
+                    "org.typelevel:macro-compat_2.12:1.1.1"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/iheart/ficus_2.12/1.4.7/ficus_2.12-1.4.7.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/iheart/ficus_2.12/1.4.7/ficus_2.12-1.4.7.jar"
+                ],
+                "sha256": "ae0834b6d7ed386c0c8aa3c4eeca33d1b4932b6562f0ce047a5a52eb0343ca22"
+            },
+            {
+                "coord": "com.iheart:ficus_2.12:jar:sources:1.4.7",
+                "file": "v1/https/repo1.maven.org/maven2/com/iheart/ficus_2.12/1.4.7/ficus_2.12-1.4.7-sources.jar",
+                "directDependencies": [
+                    "com.typesafe:config:jar:sources:1.4.0",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10",
+                    "org.typelevel:macro-compat_2.12:jar:sources:1.1.1"
+                ],
+                "dependencies": [
+                    "com.typesafe:config:jar:sources:1.4.0",
+                    "org.typelevel:macro-compat_2.12:jar:sources:1.1.1",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/iheart/ficus_2.12/1.4.7/ficus_2.12-1.4.7-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/iheart/ficus_2.12/1.4.7/ficus_2.12-1.4.7-sources.jar"
+                ],
+                "sha256": "ee9f546aee4c5686af7d333a5eec0796f9b1c6f34567d90e4f83b895572c6d94"
+            },
+            {
                 "coord": "com.jcraft:jsch:0.1.54",
                 "file": "v1/https/repo1.maven.org/maven2/com/jcraft/jsch/0.1.54/jsch-0.1.54.jar",
                 "directDependencies": [],
@@ -1929,6 +1997,330 @@
                     "https://repo1.maven.org/maven2/com/kohlschutter/junixsocket/junixsocket-native-common/2.0.4/junixsocket-native-common-2.0.4-sources.jar"
                 ],
                 "sha256": "879e7f3dbceafe8fb77f779d3373952fec32f399faf3ee8134719be05f0dfae7"
+            },
+            {
+                "coord": "com.lightbend.cloudflow:cloudflow-akka-util_2.12:1.3.3",
+                "file": "v1/https/repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-akka-util_2.12/1.3.3/cloudflow-akka-util_2.12-1.3.3.jar",
+                "directDependencies": [
+                    "com.typesafe.akka:akka-stream-contrib_2.12:0.10",
+                    "com.typesafe.akka:akka-http-jackson_2.12:10.1.9",
+                    "com.typesafe.akka:akka-http_2.12:10.1.11",
+                    "com.lightbend.cloudflow:cloudflow-akka_2.12:1.3.3",
+                    "org.scala-lang:scala-library:2.12.10",
+                    "org.apache.avro:avro-compiler:1.8.2"
+                ],
+                "dependencies": [
+                    "com.typesafe.akka:akka-stream-contrib_2.12:0.10",
+                    "com.lightbend.cloudflow:cloudflow-streamlets_2.12:1.3.3",
+                    "com.typesafe.akka:akka-actor_2.12:2.6.1",
+                    "com.fasterxml.jackson.core:jackson-annotations:2.9.0",
+                    "com.typesafe:ssl-config-core_2.12:0.4.1",
+                    "com.thoughtworks.paranamer:paranamer:2.8",
+                    "com.typesafe.akka:akka-stream_2.12:2.6.1",
+                    "org.apache.kafka:kafka-clients:2.4.0",
+                    "com.fasterxml.jackson.core:jackson-databind:2.9.9.3",
+                    "org.tukaani:xz:1.5",
+                    "org.codehaus.jackson:jackson-mapper-asl:1.9.13",
+                    "com.google.protobuf:protobuf-java:3.8.0",
+                    "org.slf4j:slf4j-api:1.7.26",
+                    "com.typesafe:config:1.4.0",
+                    "commons-lang:commons-lang:2.6",
+                    "com.typesafe.akka:akka-parsing_2.12:10.1.11",
+                    "org.typelevel:macro-compat_2.12:1.1.1",
+                    "com.typesafe.akka:akka-http-jackson_2.12:10.1.9",
+                    "com.typesafe.akka:akka-protobuf-v3_2.12:2.6.1",
+                    "com.typesafe.akka:akka-stream-kafka_2.12:2.0.2",
+                    "org.scala-lang.modules:scala-parser-combinators_2.12:1.0.4",
+                    "org.scala-lang.modules:scala-java8-compat_2.12:0.9.0",
+                    "joda-time:joda-time:2.9.7",
+                    "com.typesafe.akka:akka-http_2.12:10.1.11",
+                    "org.scala-lang.modules:scala-collection-compat_2.12:2.1.2",
+                    "com.twitter:bijection-core_2.12:0.9.6",
+                    "com.lightbend.cloudflow:cloudflow-akka_2.12:1.3.3",
+                    "org.codehaus.jackson:jackson-core-asl:1.9.13",
+                    "org.xerial.snappy:snappy-java:1.1.7.3",
+                    "com.fasterxml.jackson.module:jackson-module-paranamer:2.9.9",
+                    "com.fasterxml.jackson.core:jackson-core:2.9.9",
+                    "org.scala-lang:scala-library:2.12.10",
+                    "com.fasterxml.jackson.module:jackson-module-scala_2.12:2.9.9",
+                    "com.typesafe.akka:akka-http-core_2.12:10.1.11",
+                    "com.twitter:bijection-avro_2.12:0.9.6",
+                    "com.github.luben:zstd-jni:1.4.3-1",
+                    "org.reactivestreams:reactive-streams:1.0.2",
+                    "org.apache.avro:avro-compiler:1.8.2",
+                    "com.iheart:ficus_2.12:1.4.7",
+                    "org.lz4:lz4-java:1.6.0",
+                    "io.spray:spray-json_2.12:1.3.3",
+                    "org.apache.velocity:velocity:1.7",
+                    "org.apache.avro:avro:1.8.2",
+                    "org.apache.commons:commons-compress:1.12",
+                    "commons-collections:commons-collections:3.2.1"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-akka-util_2.12/1.3.3/cloudflow-akka-util_2.12-1.3.3.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-akka-util_2.12/1.3.3/cloudflow-akka-util_2.12-1.3.3.jar"
+                ],
+                "sha256": "3cea028611a6fce7db27a667c2bcbd92d671d1bef1be6e69077fbd101c565255"
+            },
+            {
+                "coord": "com.lightbend.cloudflow:cloudflow-akka-util_2.12:jar:sources:1.3.3",
+                "file": "v1/https/repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-akka-util_2.12/1.3.3/cloudflow-akka-util_2.12-1.3.3-sources.jar",
+                "directDependencies": [
+                    "org.scala-lang:scala-library:jar:sources:2.12.10",
+                    "com.lightbend.cloudflow:cloudflow-akka_2.12:jar:sources:1.3.3",
+                    "com.typesafe.akka:akka-http_2.12:jar:sources:10.1.11",
+                    "com.typesafe.akka:akka-stream-contrib_2.12:jar:sources:0.10",
+                    "com.typesafe.akka:akka-http-jackson_2.12:jar:sources:10.1.9",
+                    "org.apache.avro:avro-compiler:jar:sources:1.8.2"
+                ],
+                "dependencies": [
+                    "io.spray:spray-json_2.12:jar:sources:1.3.3",
+                    "joda-time:joda-time:jar:sources:2.9.7",
+                    "com.twitter:bijection-core_2.12:jar:sources:0.9.6",
+                    "com.google.protobuf:protobuf-java:jar:sources:3.8.0",
+                    "com.fasterxml.jackson.core:jackson-core:jar:sources:2.9.9",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10",
+                    "com.fasterxml.jackson.module:jackson-module-scala_2.12:jar:sources:2.9.9",
+                    "org.apache.commons:commons-compress:jar:sources:1.12",
+                    "com.fasterxml.jackson.core:jackson-databind:jar:sources:2.9.9.3",
+                    "org.apache.kafka:kafka-clients:jar:sources:2.4.0",
+                    "commons-lang:commons-lang:jar:sources:2.6",
+                    "com.typesafe.akka:akka-stream-kafka_2.12:jar:sources:2.0.2",
+                    "org.scala-lang.modules:scala-java8-compat_2.12:jar:sources:0.9.0",
+                    "org.reactivestreams:reactive-streams:jar:sources:1.0.2",
+                    "com.typesafe.akka:akka-actor_2.12:jar:sources:2.6.1",
+                    "com.github.luben:zstd-jni:jar:sources:1.4.3-1",
+                    "org.scala-lang.modules:scala-parser-combinators_2.12:jar:sources:1.0.4",
+                    "com.thoughtworks.paranamer:paranamer:jar:sources:2.8",
+                    "org.codehaus.jackson:jackson-mapper-asl:jar:sources:1.9.13",
+                    "com.iheart:ficus_2.12:jar:sources:1.4.7",
+                    "com.lightbend.cloudflow:cloudflow-akka_2.12:jar:sources:1.3.3",
+                    "com.fasterxml.jackson.module:jackson-module-paranamer:jar:sources:2.9.9",
+                    "org.slf4j:slf4j-api:jar:sources:1.7.26",
+                    "com.fasterxml.jackson.core:jackson-annotations:jar:sources:2.9.0",
+                    "org.apache.avro:avro:jar:sources:1.8.2",
+                    "com.typesafe:ssl-config-core_2.12:jar:sources:0.4.1",
+                    "com.typesafe.akka:akka-parsing_2.12:jar:sources:10.1.11",
+                    "com.typesafe.akka:akka-http_2.12:jar:sources:10.1.11",
+                    "com.typesafe.akka:akka-http-core_2.12:jar:sources:10.1.11",
+                    "org.codehaus.jackson:jackson-core-asl:jar:sources:1.9.13",
+                    "com.lightbend.cloudflow:cloudflow-streamlets_2.12:jar:sources:1.3.3",
+                    "org.tukaani:xz:jar:sources:1.5",
+                    "commons-collections:commons-collections:jar:sources:3.2.1",
+                    "org.scala-lang.modules:scala-collection-compat_2.12:jar:sources:2.1.2",
+                    "com.typesafe.akka:akka-protobuf-v3_2.12:jar:sources:2.6.1",
+                    "org.apache.velocity:velocity:jar:sources:1.7",
+                    "com.typesafe:config:jar:sources:1.4.0",
+                    "com.twitter:bijection-avro_2.12:jar:sources:0.9.6",
+                    "com.typesafe.akka:akka-stream-contrib_2.12:jar:sources:0.10",
+                    "com.typesafe.akka:akka-http-jackson_2.12:jar:sources:10.1.9",
+                    "org.lz4:lz4-java:jar:sources:1.6.0",
+                    "org.xerial.snappy:snappy-java:jar:sources:1.1.7.3",
+                    "org.apache.avro:avro-compiler:jar:sources:1.8.2",
+                    "com.typesafe.akka:akka-stream_2.12:jar:sources:2.6.1",
+                    "org.typelevel:macro-compat_2.12:jar:sources:1.1.1"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-akka-util_2.12/1.3.3/cloudflow-akka-util_2.12-1.3.3-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-akka-util_2.12/1.3.3/cloudflow-akka-util_2.12-1.3.3-sources.jar"
+                ],
+                "sha256": "ebdb0384ba78cedfd33aaffac2ba9c224b436f311687fcc31c92c6379fd2e5fc"
+            },
+            {
+                "coord": "com.lightbend.cloudflow:cloudflow-akka_2.12:1.3.3",
+                "file": "v1/https/repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-akka_2.12/1.3.3/cloudflow-akka_2.12-1.3.3.jar",
+                "directDependencies": [
+                    "com.lightbend.cloudflow:cloudflow-streamlets_2.12:1.3.3",
+                    "com.typesafe.akka:akka-stream_2.12:2.6.1",
+                    "com.typesafe.akka:akka-stream-kafka_2.12:2.0.2",
+                    "org.scala-lang:scala-library:2.12.10",
+                    "com.fasterxml.jackson.module:jackson-module-scala_2.12:2.9.9",
+                    "org.apache.avro:avro-compiler:1.8.2",
+                    "com.iheart:ficus_2.12:1.4.7",
+                    "io.spray:spray-json_2.12:1.3.3"
+                ],
+                "dependencies": [
+                    "com.lightbend.cloudflow:cloudflow-streamlets_2.12:1.3.3",
+                    "com.typesafe.akka:akka-actor_2.12:2.6.1",
+                    "com.fasterxml.jackson.core:jackson-annotations:2.9.0",
+                    "com.typesafe:ssl-config-core_2.12:0.4.1",
+                    "com.thoughtworks.paranamer:paranamer:2.8",
+                    "com.typesafe.akka:akka-stream_2.12:2.6.1",
+                    "org.apache.kafka:kafka-clients:2.4.0",
+                    "com.fasterxml.jackson.core:jackson-databind:2.9.9.3",
+                    "org.tukaani:xz:1.5",
+                    "org.codehaus.jackson:jackson-mapper-asl:1.9.13",
+                    "com.google.protobuf:protobuf-java:3.8.0",
+                    "org.slf4j:slf4j-api:1.7.26",
+                    "com.typesafe:config:1.4.0",
+                    "commons-lang:commons-lang:2.6",
+                    "org.typelevel:macro-compat_2.12:1.1.1",
+                    "com.typesafe.akka:akka-protobuf-v3_2.12:2.6.1",
+                    "com.typesafe.akka:akka-stream-kafka_2.12:2.0.2",
+                    "org.scala-lang.modules:scala-parser-combinators_2.12:1.0.4",
+                    "org.scala-lang.modules:scala-java8-compat_2.12:0.9.0",
+                    "joda-time:joda-time:2.9.7",
+                    "org.scala-lang.modules:scala-collection-compat_2.12:2.1.2",
+                    "com.twitter:bijection-core_2.12:0.9.6",
+                    "org.codehaus.jackson:jackson-core-asl:1.9.13",
+                    "org.xerial.snappy:snappy-java:1.1.7.3",
+                    "com.fasterxml.jackson.module:jackson-module-paranamer:2.9.9",
+                    "com.fasterxml.jackson.core:jackson-core:2.9.9",
+                    "org.scala-lang:scala-library:2.12.10",
+                    "com.fasterxml.jackson.module:jackson-module-scala_2.12:2.9.9",
+                    "com.twitter:bijection-avro_2.12:0.9.6",
+                    "com.github.luben:zstd-jni:1.4.3-1",
+                    "org.reactivestreams:reactive-streams:1.0.2",
+                    "org.apache.avro:avro-compiler:1.8.2",
+                    "com.iheart:ficus_2.12:1.4.7",
+                    "org.lz4:lz4-java:1.6.0",
+                    "io.spray:spray-json_2.12:1.3.3",
+                    "org.apache.velocity:velocity:1.7",
+                    "org.apache.avro:avro:1.8.2",
+                    "org.apache.commons:commons-compress:1.12",
+                    "commons-collections:commons-collections:3.2.1"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-akka_2.12/1.3.3/cloudflow-akka_2.12-1.3.3.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-akka_2.12/1.3.3/cloudflow-akka_2.12-1.3.3.jar"
+                ],
+                "sha256": "cdd922bc477a09027892532b0b0bac8638ca7386ae12d260904c6995eb74bb8b"
+            },
+            {
+                "coord": "com.lightbend.cloudflow:cloudflow-akka_2.12:jar:sources:1.3.3",
+                "file": "v1/https/repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-akka_2.12/1.3.3/cloudflow-akka_2.12-1.3.3-sources.jar",
+                "directDependencies": [
+                    "io.spray:spray-json_2.12:jar:sources:1.3.3",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10",
+                    "com.fasterxml.jackson.module:jackson-module-scala_2.12:jar:sources:2.9.9",
+                    "com.typesafe.akka:akka-stream-kafka_2.12:jar:sources:2.0.2",
+                    "com.iheart:ficus_2.12:jar:sources:1.4.7",
+                    "com.lightbend.cloudflow:cloudflow-streamlets_2.12:jar:sources:1.3.3",
+                    "org.apache.avro:avro-compiler:jar:sources:1.8.2",
+                    "com.typesafe.akka:akka-stream_2.12:jar:sources:2.6.1"
+                ],
+                "dependencies": [
+                    "io.spray:spray-json_2.12:jar:sources:1.3.3",
+                    "joda-time:joda-time:jar:sources:2.9.7",
+                    "com.twitter:bijection-core_2.12:jar:sources:0.9.6",
+                    "com.google.protobuf:protobuf-java:jar:sources:3.8.0",
+                    "com.fasterxml.jackson.core:jackson-core:jar:sources:2.9.9",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10",
+                    "com.fasterxml.jackson.module:jackson-module-scala_2.12:jar:sources:2.9.9",
+                    "org.apache.commons:commons-compress:jar:sources:1.12",
+                    "com.fasterxml.jackson.core:jackson-databind:jar:sources:2.9.9.3",
+                    "org.apache.kafka:kafka-clients:jar:sources:2.4.0",
+                    "commons-lang:commons-lang:jar:sources:2.6",
+                    "com.typesafe.akka:akka-stream-kafka_2.12:jar:sources:2.0.2",
+                    "org.scala-lang.modules:scala-java8-compat_2.12:jar:sources:0.9.0",
+                    "org.reactivestreams:reactive-streams:jar:sources:1.0.2",
+                    "com.typesafe.akka:akka-actor_2.12:jar:sources:2.6.1",
+                    "com.github.luben:zstd-jni:jar:sources:1.4.3-1",
+                    "org.scala-lang.modules:scala-parser-combinators_2.12:jar:sources:1.0.4",
+                    "com.thoughtworks.paranamer:paranamer:jar:sources:2.8",
+                    "org.codehaus.jackson:jackson-mapper-asl:jar:sources:1.9.13",
+                    "com.iheart:ficus_2.12:jar:sources:1.4.7",
+                    "com.fasterxml.jackson.module:jackson-module-paranamer:jar:sources:2.9.9",
+                    "org.slf4j:slf4j-api:jar:sources:1.7.26",
+                    "com.fasterxml.jackson.core:jackson-annotations:jar:sources:2.9.0",
+                    "org.apache.avro:avro:jar:sources:1.8.2",
+                    "com.typesafe:ssl-config-core_2.12:jar:sources:0.4.1",
+                    "org.codehaus.jackson:jackson-core-asl:jar:sources:1.9.13",
+                    "com.lightbend.cloudflow:cloudflow-streamlets_2.12:jar:sources:1.3.3",
+                    "org.tukaani:xz:jar:sources:1.5",
+                    "commons-collections:commons-collections:jar:sources:3.2.1",
+                    "org.scala-lang.modules:scala-collection-compat_2.12:jar:sources:2.1.2",
+                    "com.typesafe.akka:akka-protobuf-v3_2.12:jar:sources:2.6.1",
+                    "org.apache.velocity:velocity:jar:sources:1.7",
+                    "com.typesafe:config:jar:sources:1.4.0",
+                    "com.twitter:bijection-avro_2.12:jar:sources:0.9.6",
+                    "org.lz4:lz4-java:jar:sources:1.6.0",
+                    "org.xerial.snappy:snappy-java:jar:sources:1.1.7.3",
+                    "org.apache.avro:avro-compiler:jar:sources:1.8.2",
+                    "com.typesafe.akka:akka-stream_2.12:jar:sources:2.6.1",
+                    "org.typelevel:macro-compat_2.12:jar:sources:1.1.1"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-akka_2.12/1.3.3/cloudflow-akka_2.12-1.3.3-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-akka_2.12/1.3.3/cloudflow-akka_2.12-1.3.3-sources.jar"
+                ],
+                "sha256": "8a6a1c9dfe78f8aa99a926c2876b9cea19dfac32ce80b28ad95e441cb5e875d7"
+            },
+            {
+                "coord": "com.lightbend.cloudflow:cloudflow-streamlets_2.12:1.3.3",
+                "file": "v1/https/repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-streamlets_2.12/1.3.3/cloudflow-streamlets_2.12-1.3.3.jar",
+                "directDependencies": [
+                    "org.scala-lang:scala-library:2.12.10",
+                    "com.twitter:bijection-avro_2.12:0.9.6",
+                    "org.apache.avro:avro-compiler:1.8.2",
+                    "com.iheart:ficus_2.12:1.4.7",
+                    "io.spray:spray-json_2.12:1.3.3"
+                ],
+                "dependencies": [
+                    "com.thoughtworks.paranamer:paranamer:2.8",
+                    "org.tukaani:xz:1.5",
+                    "org.codehaus.jackson:jackson-mapper-asl:1.9.13",
+                    "org.slf4j:slf4j-api:1.7.26",
+                    "com.typesafe:config:1.4.0",
+                    "commons-lang:commons-lang:2.6",
+                    "org.typelevel:macro-compat_2.12:1.1.1",
+                    "joda-time:joda-time:2.9.7",
+                    "com.twitter:bijection-core_2.12:0.9.6",
+                    "org.codehaus.jackson:jackson-core-asl:1.9.13",
+                    "org.xerial.snappy:snappy-java:1.1.7.3",
+                    "org.scala-lang:scala-library:2.12.10",
+                    "com.twitter:bijection-avro_2.12:0.9.6",
+                    "org.apache.avro:avro-compiler:1.8.2",
+                    "com.iheart:ficus_2.12:1.4.7",
+                    "io.spray:spray-json_2.12:1.3.3",
+                    "org.apache.velocity:velocity:1.7",
+                    "org.apache.avro:avro:1.8.2",
+                    "org.apache.commons:commons-compress:1.12",
+                    "commons-collections:commons-collections:3.2.1"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-streamlets_2.12/1.3.3/cloudflow-streamlets_2.12-1.3.3.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-streamlets_2.12/1.3.3/cloudflow-streamlets_2.12-1.3.3.jar"
+                ],
+                "sha256": "3a05a5c7b65a878408a313c837a0c7b665eefbe8f4deecc51bafe40ef1ece55f"
+            },
+            {
+                "coord": "com.lightbend.cloudflow:cloudflow-streamlets_2.12:jar:sources:1.3.3",
+                "file": "v1/https/repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-streamlets_2.12/1.3.3/cloudflow-streamlets_2.12-1.3.3-sources.jar",
+                "directDependencies": [
+                    "io.spray:spray-json_2.12:jar:sources:1.3.3",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10",
+                    "com.iheart:ficus_2.12:jar:sources:1.4.7",
+                    "com.twitter:bijection-avro_2.12:jar:sources:0.9.6",
+                    "org.apache.avro:avro-compiler:jar:sources:1.8.2"
+                ],
+                "dependencies": [
+                    "io.spray:spray-json_2.12:jar:sources:1.3.3",
+                    "joda-time:joda-time:jar:sources:2.9.7",
+                    "com.twitter:bijection-core_2.12:jar:sources:0.9.6",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10",
+                    "org.apache.commons:commons-compress:jar:sources:1.12",
+                    "commons-lang:commons-lang:jar:sources:2.6",
+                    "com.thoughtworks.paranamer:paranamer:jar:sources:2.8",
+                    "org.codehaus.jackson:jackson-mapper-asl:jar:sources:1.9.13",
+                    "com.iheart:ficus_2.12:jar:sources:1.4.7",
+                    "org.slf4j:slf4j-api:jar:sources:1.7.26",
+                    "org.apache.avro:avro:jar:sources:1.8.2",
+                    "org.codehaus.jackson:jackson-core-asl:jar:sources:1.9.13",
+                    "org.tukaani:xz:jar:sources:1.5",
+                    "commons-collections:commons-collections:jar:sources:3.2.1",
+                    "org.apache.velocity:velocity:jar:sources:1.7",
+                    "com.typesafe:config:jar:sources:1.4.0",
+                    "com.twitter:bijection-avro_2.12:jar:sources:0.9.6",
+                    "org.xerial.snappy:snappy-java:jar:sources:1.1.7.3",
+                    "org.apache.avro:avro-compiler:jar:sources:1.8.2",
+                    "org.typelevel:macro-compat_2.12:jar:sources:1.1.1"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-streamlets_2.12/1.3.3/cloudflow-streamlets_2.12-1.3.3-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/lightbend/cloudflow/cloudflow-streamlets_2.12/1.3.3/cloudflow-streamlets_2.12-1.3.3-sources.jar"
+                ],
+                "sha256": "c3c1df9a1668992b89cc91853353fabb209cb16c780c7031b3e573c43f542bae"
             },
             {
                 "coord": "com.lihaoyi:fansi_2.12:0.2.5",
@@ -2761,6 +3153,138 @@
                 "sha256": "d14e202e4583e9c5b8808e090284a7bf362feab80918846f039b744d169a7ecc"
             },
             {
+                "coord": "com.twitter:bijection-avro_2.12:0.9.6",
+                "file": "v1/https/repo1.maven.org/maven2/com/twitter/bijection-avro_2.12/0.9.6/bijection-avro_2.12-0.9.6.jar",
+                "directDependencies": [
+                    "com.twitter:bijection-core_2.12:0.9.6",
+                    "org.apache.avro:avro:1.8.2",
+                    "org.scala-lang:scala-library:2.12.10"
+                ],
+                "dependencies": [
+                    "com.thoughtworks.paranamer:paranamer:2.8",
+                    "org.tukaani:xz:1.5",
+                    "org.codehaus.jackson:jackson-mapper-asl:1.9.13",
+                    "org.slf4j:slf4j-api:1.7.26",
+                    "com.twitter:bijection-core_2.12:0.9.6",
+                    "org.codehaus.jackson:jackson-core-asl:1.9.13",
+                    "org.xerial.snappy:snappy-java:1.1.7.3",
+                    "org.scala-lang:scala-library:2.12.10",
+                    "org.apache.avro:avro:1.8.2",
+                    "org.apache.commons:commons-compress:1.12"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/twitter/bijection-avro_2.12/0.9.6/bijection-avro_2.12-0.9.6.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/twitter/bijection-avro_2.12/0.9.6/bijection-avro_2.12-0.9.6.jar"
+                ],
+                "sha256": "f54c6801ba1946a3a8a94f2275c052e1720f536f5a30e3dc9bc216b47d3ae6d0"
+            },
+            {
+                "coord": "com.twitter:bijection-avro_2.12:jar:sources:0.9.6",
+                "file": "v1/https/repo1.maven.org/maven2/com/twitter/bijection-avro_2.12/0.9.6/bijection-avro_2.12-0.9.6-sources.jar",
+                "directDependencies": [
+                    "com.twitter:bijection-core_2.12:jar:sources:0.9.6",
+                    "org.apache.avro:avro:jar:sources:1.8.2",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10"
+                ],
+                "dependencies": [
+                    "com.twitter:bijection-core_2.12:jar:sources:0.9.6",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10",
+                    "org.apache.commons:commons-compress:jar:sources:1.12",
+                    "com.thoughtworks.paranamer:paranamer:jar:sources:2.8",
+                    "org.codehaus.jackson:jackson-mapper-asl:jar:sources:1.9.13",
+                    "org.slf4j:slf4j-api:jar:sources:1.7.26",
+                    "org.apache.avro:avro:jar:sources:1.8.2",
+                    "org.codehaus.jackson:jackson-core-asl:jar:sources:1.9.13",
+                    "org.tukaani:xz:jar:sources:1.5",
+                    "org.xerial.snappy:snappy-java:jar:sources:1.1.7.3"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/twitter/bijection-avro_2.12/0.9.6/bijection-avro_2.12-0.9.6-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/twitter/bijection-avro_2.12/0.9.6/bijection-avro_2.12-0.9.6-sources.jar"
+                ],
+                "sha256": "836d147dbd05de5b11d5104e7a1ae9c45a96137ebcd69ec7f859c0c27a8d8beb"
+            },
+            {
+                "coord": "com.twitter:bijection-core_2.12:0.9.6",
+                "file": "v1/https/repo1.maven.org/maven2/com/twitter/bijection-core_2.12/0.9.6/bijection-core_2.12-0.9.6.jar",
+                "directDependencies": [
+                    "org.scala-lang:scala-library:2.12.10"
+                ],
+                "dependencies": [
+                    "org.scala-lang:scala-library:2.12.10"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/twitter/bijection-core_2.12/0.9.6/bijection-core_2.12-0.9.6.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/twitter/bijection-core_2.12/0.9.6/bijection-core_2.12-0.9.6.jar"
+                ],
+                "sha256": "d91555e862851277e48efd8a21651880e1b5a239c2de1f8f1f440aae06052c70"
+            },
+            {
+                "coord": "com.twitter:bijection-core_2.12:jar:sources:0.9.6",
+                "file": "v1/https/repo1.maven.org/maven2/com/twitter/bijection-core_2.12/0.9.6/bijection-core_2.12-0.9.6-sources.jar",
+                "directDependencies": [
+                    "org.scala-lang:scala-library:jar:sources:2.12.10"
+                ],
+                "dependencies": [
+                    "org.scala-lang:scala-library:jar:sources:2.12.10"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/twitter/bijection-core_2.12/0.9.6/bijection-core_2.12-0.9.6-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/twitter/bijection-core_2.12/0.9.6/bijection-core_2.12-0.9.6-sources.jar"
+                ],
+                "sha256": "5a2acbf7958d262ef421b4c107166da3dd3f61c27e411ccaaf9f9d59a264a2c5"
+            },
+            {
+                "coord": "com.typesafe.akka:akka-actor-testkit-typed_2.12:2.6.1",
+                "file": "v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor-testkit-typed_2.12/2.6.1/akka-actor-testkit-typed_2.12-2.6.1.jar",
+                "directDependencies": [
+                    "com.typesafe.akka:akka-actor-typed_2.12:2.6.1",
+                    "com.typesafe.akka:akka-slf4j_2.12:2.6.1",
+                    "com.typesafe.akka:akka-testkit_2.12:2.6.1",
+                    "org.scala-lang:scala-library:2.12.10"
+                ],
+                "dependencies": [
+                    "com.typesafe.akka:akka-actor_2.12:2.6.1",
+                    "com.typesafe.akka:akka-testkit_2.12:2.6.1",
+                    "org.slf4j:slf4j-api:1.7.26",
+                    "com.typesafe:config:1.4.0",
+                    "org.scala-lang.modules:scala-java8-compat_2.12:0.9.0",
+                    "com.typesafe.akka:akka-actor-typed_2.12:2.6.1",
+                    "org.scala-lang:scala-library:2.12.10",
+                    "com.typesafe.akka:akka-slf4j_2.12:2.6.1"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor-testkit-typed_2.12/2.6.1/akka-actor-testkit-typed_2.12-2.6.1.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor-testkit-typed_2.12/2.6.1/akka-actor-testkit-typed_2.12-2.6.1.jar"
+                ],
+                "sha256": "502ff4864801d83a5d376c28ed8f34a0520b995be85d7d26dd4a747f89c25da0"
+            },
+            {
+                "coord": "com.typesafe.akka:akka-actor-testkit-typed_2.12:jar:sources:2.6.1",
+                "file": "v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor-testkit-typed_2.12/2.6.1/akka-actor-testkit-typed_2.12-2.6.1-sources.jar",
+                "directDependencies": [
+                    "com.typesafe.akka:akka-actor-typed_2.12:jar:sources:2.6.1",
+                    "com.typesafe.akka:akka-slf4j_2.12:jar:sources:2.6.1",
+                    "com.typesafe.akka:akka-testkit_2.12:jar:sources:2.6.1",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10"
+                ],
+                "dependencies": [
+                    "com.typesafe.akka:akka-slf4j_2.12:jar:sources:2.6.1",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10",
+                    "com.typesafe.akka:akka-testkit_2.12:jar:sources:2.6.1",
+                    "org.scala-lang.modules:scala-java8-compat_2.12:jar:sources:0.9.0",
+                    "com.typesafe.akka:akka-actor_2.12:jar:sources:2.6.1",
+                    "org.slf4j:slf4j-api:jar:sources:1.7.26",
+                    "com.typesafe:config:jar:sources:1.4.0",
+                    "com.typesafe.akka:akka-actor-typed_2.12:jar:sources:2.6.1"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor-testkit-typed_2.12/2.6.1/akka-actor-testkit-typed_2.12-2.6.1-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor-testkit-typed_2.12/2.6.1/akka-actor-testkit-typed_2.12-2.6.1-sources.jar"
+                ],
+                "sha256": "e2b948f99f152de16d308bb578c18bd49605b43ed5cba5e9a5adeb777b2af65a"
+            },
+            {
                 "coord": "com.typesafe.akka:akka-actor-typed_2.12:2.6.1",
                 "file": "v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor-typed_2.12/2.6.1/akka-actor-typed_2.12-2.6.1.jar",
                 "directDependencies": [
@@ -2877,6 +3401,52 @@
                     "https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-core_2.12/10.1.11/akka-http-core_2.12-10.1.11-sources.jar"
                 ],
                 "sha256": "86bfc56059da447612a9daf9d025806f82a95486bbd2e1d3fb2362dde7052e11"
+            },
+            {
+                "coord": "com.typesafe.akka:akka-http-jackson_2.12:10.1.9",
+                "file": "v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-http-jackson_2.12/10.1.9/akka-http-jackson_2.12-10.1.9.jar",
+                "directDependencies": [
+                    "com.fasterxml.jackson.core:jackson-databind:2.9.9.3",
+                    "com.typesafe.akka:akka-http_2.12:10.1.11",
+                    "org.scala-lang:scala-library:2.12.10"
+                ],
+                "dependencies": [
+                    "com.fasterxml.jackson.core:jackson-annotations:2.9.0",
+                    "com.fasterxml.jackson.core:jackson-databind:2.9.9.3",
+                    "com.typesafe.akka:akka-parsing_2.12:10.1.11",
+                    "com.typesafe.akka:akka-http_2.12:10.1.11",
+                    "com.fasterxml.jackson.core:jackson-core:2.9.9",
+                    "org.scala-lang:scala-library:2.12.10",
+                    "com.typesafe.akka:akka-http-core_2.12:10.1.11"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-jackson_2.12/10.1.9/akka-http-jackson_2.12-10.1.9.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-jackson_2.12/10.1.9/akka-http-jackson_2.12-10.1.9.jar"
+                ],
+                "sha256": "245bc6b3270a15a2cee2f13523927a98d88f4c6cf202dad3b5e47f5d992e8f7a"
+            },
+            {
+                "coord": "com.typesafe.akka:akka-http-jackson_2.12:jar:sources:10.1.9",
+                "file": "v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-http-jackson_2.12/10.1.9/akka-http-jackson_2.12-10.1.9-sources.jar",
+                "directDependencies": [
+                    "com.fasterxml.jackson.core:jackson-databind:jar:sources:2.9.9.3",
+                    "com.typesafe.akka:akka-http_2.12:jar:sources:10.1.11",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10"
+                ],
+                "dependencies": [
+                    "com.fasterxml.jackson.core:jackson-core:jar:sources:2.9.9",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10",
+                    "com.fasterxml.jackson.core:jackson-databind:jar:sources:2.9.9.3",
+                    "com.fasterxml.jackson.core:jackson-annotations:jar:sources:2.9.0",
+                    "com.typesafe.akka:akka-parsing_2.12:jar:sources:10.1.11",
+                    "com.typesafe.akka:akka-http_2.12:jar:sources:10.1.11",
+                    "com.typesafe.akka:akka-http-core_2.12:jar:sources:10.1.11"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-jackson_2.12/10.1.9/akka-http-jackson_2.12-10.1.9-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-jackson_2.12/10.1.9/akka-http-jackson_2.12-10.1.9-sources.jar"
+                ],
+                "sha256": "86445a790a639223f115836bfa518d8f910e6dffe216bdd584b9f63e656c8819"
             },
             {
                 "coord": "com.typesafe.akka:akka-http-spray-json_2.12:10.1.11",
@@ -3095,6 +3665,130 @@
                     "https://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.12/2.6.1/akka-slf4j_2.12-2.6.1-sources.jar"
                 ],
                 "sha256": "3fb2b104f3480d87a5c819d5ea52cce5cfabc41ba2394bd761c8499be818fc88"
+            },
+            {
+                "coord": "com.typesafe.akka:akka-stream-contrib_2.12:0.10",
+                "file": "v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-stream-contrib_2.12/0.10/akka-stream-contrib_2.12-0.10.jar",
+                "directDependencies": [
+                    "com.typesafe.akka:akka-stream_2.12:2.6.1",
+                    "org.scala-lang:scala-library:2.12.10"
+                ],
+                "dependencies": [
+                    "com.typesafe.akka:akka-actor_2.12:2.6.1",
+                    "com.typesafe:ssl-config-core_2.12:0.4.1",
+                    "com.typesafe.akka:akka-stream_2.12:2.6.1",
+                    "com.google.protobuf:protobuf-java:3.8.0",
+                    "com.typesafe:config:1.4.0",
+                    "com.typesafe.akka:akka-protobuf-v3_2.12:2.6.1",
+                    "org.scala-lang.modules:scala-parser-combinators_2.12:1.0.4",
+                    "org.scala-lang.modules:scala-java8-compat_2.12:0.9.0",
+                    "org.scala-lang:scala-library:2.12.10",
+                    "org.reactivestreams:reactive-streams:1.0.2"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream-contrib_2.12/0.10/akka-stream-contrib_2.12-0.10.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream-contrib_2.12/0.10/akka-stream-contrib_2.12-0.10.jar"
+                ],
+                "sha256": "7d647fd5990168f8d91397fbc34ce19e151323fd1686460ac1cdcc64e8a288ac"
+            },
+            {
+                "coord": "com.typesafe.akka:akka-stream-contrib_2.12:jar:sources:0.10",
+                "file": "v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-stream-contrib_2.12/0.10/akka-stream-contrib_2.12-0.10-sources.jar",
+                "directDependencies": [
+                    "com.typesafe.akka:akka-stream_2.12:jar:sources:2.6.1",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10"
+                ],
+                "dependencies": [
+                    "com.google.protobuf:protobuf-java:jar:sources:3.8.0",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10",
+                    "org.scala-lang.modules:scala-java8-compat_2.12:jar:sources:0.9.0",
+                    "org.reactivestreams:reactive-streams:jar:sources:1.0.2",
+                    "com.typesafe.akka:akka-actor_2.12:jar:sources:2.6.1",
+                    "org.scala-lang.modules:scala-parser-combinators_2.12:jar:sources:1.0.4",
+                    "com.typesafe:ssl-config-core_2.12:jar:sources:0.4.1",
+                    "com.typesafe.akka:akka-protobuf-v3_2.12:jar:sources:2.6.1",
+                    "com.typesafe:config:jar:sources:1.4.0",
+                    "com.typesafe.akka:akka-stream_2.12:jar:sources:2.6.1"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream-contrib_2.12/0.10/akka-stream-contrib_2.12-0.10-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream-contrib_2.12/0.10/akka-stream-contrib_2.12-0.10-sources.jar"
+                ],
+                "sha256": "50767593d94d255787eb8aaf3bec71380016bd494f76867339aac4a20b02428c"
+            },
+            {
+                "coord": "com.typesafe.akka:akka-stream-kafka_2.12:2.0.2",
+                "file": "v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-stream-kafka_2.12/2.0.2/akka-stream-kafka_2.12-2.0.2.jar",
+                "directDependencies": [
+                    "com.typesafe.akka:akka-stream_2.12:2.6.1",
+                    "org.apache.kafka:kafka-clients:2.4.0",
+                    "org.scala-lang:scala-library:2.12.10",
+                    "org.scala-lang.modules:scala-collection-compat_2.12:2.1.2"
+                ],
+                "dependencies": [
+                    "com.typesafe.akka:akka-actor_2.12:2.6.1",
+                    "com.typesafe:ssl-config-core_2.12:0.4.1",
+                    "com.typesafe.akka:akka-stream_2.12:2.6.1",
+                    "org.apache.kafka:kafka-clients:2.4.0",
+                    "com.google.protobuf:protobuf-java:3.8.0",
+                    "org.slf4j:slf4j-api:1.7.26",
+                    "com.typesafe:config:1.4.0",
+                    "com.typesafe.akka:akka-protobuf-v3_2.12:2.6.1",
+                    "org.scala-lang.modules:scala-parser-combinators_2.12:1.0.4",
+                    "org.scala-lang.modules:scala-java8-compat_2.12:0.9.0",
+                    "org.scala-lang.modules:scala-collection-compat_2.12:2.1.2",
+                    "org.xerial.snappy:snappy-java:1.1.7.3",
+                    "org.scala-lang:scala-library:2.12.10",
+                    "com.github.luben:zstd-jni:1.4.3-1",
+                    "org.reactivestreams:reactive-streams:1.0.2",
+                    "org.lz4:lz4-java:1.6.0"
+                ],
+                "exclusions": [
+                    "com.fasterxml.jackson.core:jackson-databind",
+                    "com.fasterxml.jackson.module:jackson-module-scala"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream-kafka_2.12/2.0.2/akka-stream-kafka_2.12-2.0.2.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream-kafka_2.12/2.0.2/akka-stream-kafka_2.12-2.0.2.jar"
+                ],
+                "sha256": "74075b916416b348ee990a5501159e896b25d1401a553a249f05ec7681208d9e"
+            },
+            {
+                "coord": "com.typesafe.akka:akka-stream-kafka_2.12:jar:sources:2.0.2",
+                "file": "v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-stream-kafka_2.12/2.0.2/akka-stream-kafka_2.12-2.0.2-sources.jar",
+                "directDependencies": [
+                    "com.typesafe.akka:akka-stream_2.12:jar:sources:2.6.1",
+                    "org.apache.kafka:kafka-clients:jar:sources:2.4.0",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10",
+                    "org.scala-lang.modules:scala-collection-compat_2.12:jar:sources:2.1.2"
+                ],
+                "dependencies": [
+                    "com.google.protobuf:protobuf-java:jar:sources:3.8.0",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10",
+                    "org.apache.kafka:kafka-clients:jar:sources:2.4.0",
+                    "org.scala-lang.modules:scala-java8-compat_2.12:jar:sources:0.9.0",
+                    "org.reactivestreams:reactive-streams:jar:sources:1.0.2",
+                    "com.typesafe.akka:akka-actor_2.12:jar:sources:2.6.1",
+                    "com.github.luben:zstd-jni:jar:sources:1.4.3-1",
+                    "org.scala-lang.modules:scala-parser-combinators_2.12:jar:sources:1.0.4",
+                    "org.slf4j:slf4j-api:jar:sources:1.7.26",
+                    "com.typesafe:ssl-config-core_2.12:jar:sources:0.4.1",
+                    "org.scala-lang.modules:scala-collection-compat_2.12:jar:sources:2.1.2",
+                    "com.typesafe.akka:akka-protobuf-v3_2.12:jar:sources:2.6.1",
+                    "com.typesafe:config:jar:sources:1.4.0",
+                    "org.lz4:lz4-java:jar:sources:1.6.0",
+                    "org.xerial.snappy:snappy-java:jar:sources:1.1.7.3",
+                    "com.typesafe.akka:akka-stream_2.12:jar:sources:2.6.1"
+                ],
+                "exclusions": [
+                    "com.fasterxml.jackson.core:jackson-databind",
+                    "com.fasterxml.jackson.module:jackson-module-scala"
+                ],
+                "url": "https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream-kafka_2.12/2.0.2/akka-stream-kafka_2.12-2.0.2-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream-kafka_2.12/2.0.2/akka-stream-kafka_2.12-2.0.2-sources.jar"
+                ],
+                "sha256": "3473a2c01542f1d4d4a77c1f52ce3b656a34b52a8c282ee3853e9ea03ba87cc0"
             },
             {
                 "coord": "com.typesafe.akka:akka-stream-testkit_2.12:2.6.1",
@@ -3611,26 +4305,26 @@
                 "sha256": "09a72795a920c1a9c0209cfb8395f8d97089832d249cba8c0938a3423b3ed1d1"
             },
             {
-                "coord": "commons-collections:commons-collections:3.0",
-                "file": "v1/https/repo1.maven.org/maven2/commons-collections/commons-collections/3.0/commons-collections-3.0.jar",
+                "coord": "commons-collections:commons-collections:3.2.1",
+                "file": "v1/https/repo1.maven.org/maven2/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar",
                 "directDependencies": [],
                 "dependencies": [],
-                "url": "https://repo1.maven.org/maven2/commons-collections/commons-collections/3.0/commons-collections-3.0.jar",
+                "url": "https://repo1.maven.org/maven2/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar",
                 "mirror_urls": [
-                    "https://repo1.maven.org/maven2/commons-collections/commons-collections/3.0/commons-collections-3.0.jar"
+                    "https://repo1.maven.org/maven2/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar"
                 ],
-                "sha256": "505b94d86b214e7e6c1e75f04ff418a8264ea8454b55b8ced8c93c45884eb6a2"
+                "sha256": "87363a4c94eaabeefd8b930cb059f66b64c9f7d632862f23de3012da7660047b"
             },
             {
-                "coord": "commons-collections:commons-collections:jar:sources:3.0",
-                "file": "v1/https/repo1.maven.org/maven2/commons-collections/commons-collections/3.0/commons-collections-3.0-sources.jar",
+                "coord": "commons-collections:commons-collections:jar:sources:3.2.1",
+                "file": "v1/https/repo1.maven.org/maven2/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-sources.jar",
                 "directDependencies": [],
                 "dependencies": [],
-                "url": "https://repo1.maven.org/maven2/commons-collections/commons-collections/3.0/commons-collections-3.0-sources.jar",
+                "url": "https://repo1.maven.org/maven2/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-sources.jar",
                 "mirror_urls": [
-                    "https://repo1.maven.org/maven2/commons-collections/commons-collections/3.0/commons-collections-3.0-sources.jar"
+                    "https://repo1.maven.org/maven2/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-sources.jar"
                 ],
-                "sha256": "4e15551f196a38ce167d8170c94f0abb2a514584ee7ac9b05151ed1600b98917"
+                "sha256": "5bd4cfb6db784c74d344fd6c39801763e0bf5d553ae1e06d5357673f63883cec"
             },
             {
                 "coord": "commons-io:commons-io:2.5",
@@ -5649,6 +6343,124 @@
                 "sha256": "fa50f4de9d3331c61331b22d1e3b9fc3b005f50905c871ceb247a6e84e835953"
             },
             {
+                "coord": "org.apache.avro:avro-compiler:1.8.2",
+                "file": "v1/https/repo1.maven.org/maven2/org/apache/avro/avro-compiler/1.8.2/avro-compiler-1.8.2.jar",
+                "directDependencies": [
+                    "org.codehaus.jackson:jackson-mapper-asl:1.9.13",
+                    "org.slf4j:slf4j-api:1.7.26",
+                    "commons-lang:commons-lang:2.6",
+                    "joda-time:joda-time:2.9.7",
+                    "org.codehaus.jackson:jackson-core-asl:1.9.13",
+                    "org.apache.velocity:velocity:1.7",
+                    "org.apache.avro:avro:1.8.2"
+                ],
+                "dependencies": [
+                    "com.thoughtworks.paranamer:paranamer:2.8",
+                    "org.tukaani:xz:1.5",
+                    "org.codehaus.jackson:jackson-mapper-asl:1.9.13",
+                    "org.slf4j:slf4j-api:1.7.26",
+                    "commons-lang:commons-lang:2.6",
+                    "joda-time:joda-time:2.9.7",
+                    "org.codehaus.jackson:jackson-core-asl:1.9.13",
+                    "org.xerial.snappy:snappy-java:1.1.7.3",
+                    "org.apache.velocity:velocity:1.7",
+                    "org.apache.avro:avro:1.8.2",
+                    "org.apache.commons:commons-compress:1.12",
+                    "commons-collections:commons-collections:3.2.1"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/apache/avro/avro-compiler/1.8.2/avro-compiler-1.8.2.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/apache/avro/avro-compiler/1.8.2/avro-compiler-1.8.2.jar"
+                ],
+                "sha256": "93b2ee71d3e0330503cd795347ab552fc31efcd821f8acbd09241134719aeca4"
+            },
+            {
+                "coord": "org.apache.avro:avro-compiler:jar:sources:1.8.2",
+                "file": "v1/https/repo1.maven.org/maven2/org/apache/avro/avro-compiler/1.8.2/avro-compiler-1.8.2-sources.jar",
+                "directDependencies": [
+                    "joda-time:joda-time:jar:sources:2.9.7",
+                    "commons-lang:commons-lang:jar:sources:2.6",
+                    "org.codehaus.jackson:jackson-mapper-asl:jar:sources:1.9.13",
+                    "org.slf4j:slf4j-api:jar:sources:1.7.26",
+                    "org.apache.avro:avro:jar:sources:1.8.2",
+                    "org.codehaus.jackson:jackson-core-asl:jar:sources:1.9.13",
+                    "org.apache.velocity:velocity:jar:sources:1.7"
+                ],
+                "dependencies": [
+                    "joda-time:joda-time:jar:sources:2.9.7",
+                    "org.apache.commons:commons-compress:jar:sources:1.12",
+                    "commons-lang:commons-lang:jar:sources:2.6",
+                    "com.thoughtworks.paranamer:paranamer:jar:sources:2.8",
+                    "org.codehaus.jackson:jackson-mapper-asl:jar:sources:1.9.13",
+                    "org.slf4j:slf4j-api:jar:sources:1.7.26",
+                    "org.apache.avro:avro:jar:sources:1.8.2",
+                    "org.codehaus.jackson:jackson-core-asl:jar:sources:1.9.13",
+                    "org.tukaani:xz:jar:sources:1.5",
+                    "commons-collections:commons-collections:jar:sources:3.2.1",
+                    "org.apache.velocity:velocity:jar:sources:1.7",
+                    "org.xerial.snappy:snappy-java:jar:sources:1.1.7.3"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/apache/avro/avro-compiler/1.8.2/avro-compiler-1.8.2-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/apache/avro/avro-compiler/1.8.2/avro-compiler-1.8.2-sources.jar"
+                ],
+                "sha256": "58da5356c1531b4d066d68acdca401615e1b4a778b66da40f1c580d0bbe9fea8"
+            },
+            {
+                "coord": "org.apache.avro:avro:1.8.2",
+                "file": "v1/https/repo1.maven.org/maven2/org/apache/avro/avro/1.8.2/avro-1.8.2.jar",
+                "directDependencies": [
+                    "com.thoughtworks.paranamer:paranamer:2.8",
+                    "org.tukaani:xz:1.5",
+                    "org.codehaus.jackson:jackson-mapper-asl:1.9.13",
+                    "org.slf4j:slf4j-api:1.7.26",
+                    "org.codehaus.jackson:jackson-core-asl:1.9.13",
+                    "org.xerial.snappy:snappy-java:1.1.7.3",
+                    "org.apache.commons:commons-compress:1.12"
+                ],
+                "dependencies": [
+                    "com.thoughtworks.paranamer:paranamer:2.8",
+                    "org.tukaani:xz:1.5",
+                    "org.codehaus.jackson:jackson-mapper-asl:1.9.13",
+                    "org.slf4j:slf4j-api:1.7.26",
+                    "org.codehaus.jackson:jackson-core-asl:1.9.13",
+                    "org.xerial.snappy:snappy-java:1.1.7.3",
+                    "org.apache.commons:commons-compress:1.12"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/apache/avro/avro/1.8.2/avro-1.8.2.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/apache/avro/avro/1.8.2/avro-1.8.2.jar"
+                ],
+                "sha256": "f754a0830ce67a5a9fa67a54ec15d103ef15e1c850d7b26faf7b647eeddc82d3"
+            },
+            {
+                "coord": "org.apache.avro:avro:jar:sources:1.8.2",
+                "file": "v1/https/repo1.maven.org/maven2/org/apache/avro/avro/1.8.2/avro-1.8.2-sources.jar",
+                "directDependencies": [
+                    "org.apache.commons:commons-compress:jar:sources:1.12",
+                    "com.thoughtworks.paranamer:paranamer:jar:sources:2.8",
+                    "org.codehaus.jackson:jackson-mapper-asl:jar:sources:1.9.13",
+                    "org.slf4j:slf4j-api:jar:sources:1.7.26",
+                    "org.codehaus.jackson:jackson-core-asl:jar:sources:1.9.13",
+                    "org.tukaani:xz:jar:sources:1.5",
+                    "org.xerial.snappy:snappy-java:jar:sources:1.1.7.3"
+                ],
+                "dependencies": [
+                    "org.apache.commons:commons-compress:jar:sources:1.12",
+                    "com.thoughtworks.paranamer:paranamer:jar:sources:2.8",
+                    "org.codehaus.jackson:jackson-mapper-asl:jar:sources:1.9.13",
+                    "org.slf4j:slf4j-api:jar:sources:1.7.26",
+                    "org.codehaus.jackson:jackson-core-asl:jar:sources:1.9.13",
+                    "org.tukaani:xz:jar:sources:1.5",
+                    "org.xerial.snappy:snappy-java:jar:sources:1.1.7.3"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/apache/avro/avro/1.8.2/avro-1.8.2-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/apache/avro/avro/1.8.2/avro-1.8.2-sources.jar"
+                ],
+                "sha256": "00acbcc9238dee015946ce96f0ca617070740a1c448d6ba56ee2fac081da09c6"
+            },
+            {
                 "coord": "org.apache.commons:commons-compress:1.12",
                 "file": "v1/https/repo1.maven.org/maven2/org/apache/commons/commons-compress/1.12/commons-compress-1.12.jar",
                 "directDependencies": [],
@@ -5827,6 +6639,56 @@
                 "sha256": "292895822468716a4b8c65b07f9e45c8a9ff9946aa5407c883f5f455d09cdf9e"
             },
             {
+                "coord": "org.apache.kafka:kafka-clients:2.4.0",
+                "file": "v1/https/repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.4.0/kafka-clients-2.4.0.jar",
+                "directDependencies": [
+                    "com.github.luben:zstd-jni:1.4.3-1",
+                    "org.lz4:lz4-java:1.6.0",
+                    "org.slf4j:slf4j-api:1.7.26",
+                    "org.xerial.snappy:snappy-java:1.1.7.3"
+                ],
+                "dependencies": [
+                    "com.github.luben:zstd-jni:1.4.3-1",
+                    "org.xerial.snappy:snappy-java:1.1.7.3",
+                    "org.slf4j:slf4j-api:1.7.26",
+                    "org.lz4:lz4-java:1.6.0"
+                ],
+                "exclusions": [
+                    "com.fasterxml.jackson.core:jackson-databind",
+                    "com.fasterxml.jackson.module:jackson-module-scala"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.4.0/kafka-clients-2.4.0.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.4.0/kafka-clients-2.4.0.jar"
+                ],
+                "sha256": "5e902f581d20a1f6e9669dab8eb6c64a2830ad34cf7765b668ea9de72fba25ac"
+            },
+            {
+                "coord": "org.apache.kafka:kafka-clients:jar:sources:2.4.0",
+                "file": "v1/https/repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.4.0/kafka-clients-2.4.0-sources.jar",
+                "directDependencies": [
+                    "com.github.luben:zstd-jni:jar:sources:1.4.3-1",
+                    "org.lz4:lz4-java:jar:sources:1.6.0",
+                    "org.slf4j:slf4j-api:jar:sources:1.7.26",
+                    "org.xerial.snappy:snappy-java:jar:sources:1.1.7.3"
+                ],
+                "dependencies": [
+                    "org.xerial.snappy:snappy-java:jar:sources:1.1.7.3",
+                    "org.slf4j:slf4j-api:jar:sources:1.7.26",
+                    "com.github.luben:zstd-jni:jar:sources:1.4.3-1",
+                    "org.lz4:lz4-java:jar:sources:1.6.0"
+                ],
+                "exclusions": [
+                    "com.fasterxml.jackson.core:jackson-databind",
+                    "com.fasterxml.jackson.module:jackson-module-scala"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.4.0/kafka-clients-2.4.0-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.4.0/kafka-clients-2.4.0-sources.jar"
+                ],
+                "sha256": "41d5f3559123a30fdfc9ab57482f1c4e0ebbd31dd062f149d7a4e50d3d55a0bc"
+            },
+            {
                 "coord": "org.apache.logging.log4j:log4j-api:2.8.1",
                 "file": "v1/https/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-api/2.8.1/log4j-api-2.8.1.jar",
                 "directDependencies": [],
@@ -5915,6 +6777,40 @@
                     "https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-slf4j-impl/2.8.1/log4j-slf4j-impl-2.8.1-sources.jar"
                 ],
                 "sha256": "33b86ad14e4af9e74107cebd7e51ae5ff96a0ffe06b5c6fead6a84d3a903312a"
+            },
+            {
+                "coord": "org.apache.velocity:velocity:1.7",
+                "file": "v1/https/repo1.maven.org/maven2/org/apache/velocity/velocity/1.7/velocity-1.7.jar",
+                "directDependencies": [
+                    "commons-collections:commons-collections:3.2.1",
+                    "commons-lang:commons-lang:2.6"
+                ],
+                "dependencies": [
+                    "commons-collections:commons-collections:3.2.1",
+                    "commons-lang:commons-lang:2.6"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/apache/velocity/velocity/1.7/velocity-1.7.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/apache/velocity/velocity/1.7/velocity-1.7.jar"
+                ],
+                "sha256": "ec92dae810034f4b46dbb16ef4364a4013b0efb24a8c5dd67435cae46a290d8e"
+            },
+            {
+                "coord": "org.apache.velocity:velocity:jar:sources:1.7",
+                "file": "v1/https/repo1.maven.org/maven2/org/apache/velocity/velocity/1.7/velocity-1.7-sources.jar",
+                "directDependencies": [
+                    "commons-collections:commons-collections:jar:sources:3.2.1",
+                    "commons-lang:commons-lang:jar:sources:2.6"
+                ],
+                "dependencies": [
+                    "commons-collections:commons-collections:jar:sources:3.2.1",
+                    "commons-lang:commons-lang:jar:sources:2.6"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/apache/velocity/velocity/1.7/velocity-1.7-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/apache/velocity/velocity/1.7/velocity-1.7-sources.jar"
+                ],
+                "sha256": "fb8079077f7ef9b4ee406b893d0e919f97fa468b3aa45782b341519f3ccbc2c2"
             },
             {
                 "coord": "org.apiguardian:apiguardian-api:1.0.0",
@@ -6058,6 +6954,58 @@
                     "https://repo1.maven.org/maven2/org/checkerframework/checker/2.5.4/checker-2.5.4-sources.jar"
                 ],
                 "sha256": "764f65795e857c36c381e07b76f2e19217a472cef4c352bd40a090ca94305326"
+            },
+            {
+                "coord": "org.codehaus.jackson:jackson-core-asl:1.9.13",
+                "file": "v1/https/repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar"
+                ],
+                "sha256": "440a9cb5ca95b215f953d3a20a6b1a10da1f09b529a9ddea5f8a4905ddab4f5a"
+            },
+            {
+                "coord": "org.codehaus.jackson:jackson-core-asl:jar:sources:1.9.13",
+                "file": "v1/https/repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13-sources.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13-sources.jar"
+                ],
+                "sha256": "f4dad3a1b9a20fbcfd375034309e717e16740c3d770725037f165ef2cfe852bd"
+            },
+            {
+                "coord": "org.codehaus.jackson:jackson-mapper-asl:1.9.13",
+                "file": "v1/https/repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar",
+                "directDependencies": [
+                    "org.codehaus.jackson:jackson-core-asl:1.9.13"
+                ],
+                "dependencies": [
+                    "org.codehaus.jackson:jackson-core-asl:1.9.13"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar"
+                ],
+                "sha256": "74e7a07a76f2edbade29312a5a2ebccfa019128bc021ece3856d76197e9be0c2"
+            },
+            {
+                "coord": "org.codehaus.jackson:jackson-mapper-asl:jar:sources:1.9.13",
+                "file": "v1/https/repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13-sources.jar",
+                "directDependencies": [
+                    "org.codehaus.jackson:jackson-core-asl:jar:sources:1.9.13"
+                ],
+                "dependencies": [
+                    "org.codehaus.jackson:jackson-core-asl:jar:sources:1.9.13"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13-sources.jar"
+                ],
+                "sha256": "da040569de0b23cfd0c39c303a7d9dd512d0a848e71f48f370b33442949c3e5c"
             },
             {
                 "coord": "org.codehaus.mojo:animal-sniffer-annotations:1.17",
@@ -7247,6 +8195,36 @@
                 "sha256": "d9359c6d987d2209f8dc5fb510d7a0e748d0ef80f34ab3a040c4d70324da31c7"
             },
             {
+                "coord": "org.lz4:lz4-java:1.6.0",
+                "file": "v1/https/repo1.maven.org/maven2/org/lz4/lz4-java/1.6.0/lz4-java-1.6.0.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "exclusions": [
+                    "com.fasterxml.jackson.core:jackson-databind",
+                    "com.fasterxml.jackson.module:jackson-module-scala"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/lz4/lz4-java/1.6.0/lz4-java-1.6.0.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/lz4/lz4-java/1.6.0/lz4-java-1.6.0.jar"
+                ],
+                "sha256": "d229545aa2b1d5203c876614bdbcffcacc303697f4f8f26f764e1d6c1ed2e416"
+            },
+            {
+                "coord": "org.lz4:lz4-java:jar:sources:1.6.0",
+                "file": "v1/https/repo1.maven.org/maven2/org/lz4/lz4-java/1.6.0/lz4-java-1.6.0-sources.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "exclusions": [
+                    "com.fasterxml.jackson.core:jackson-databind",
+                    "com.fasterxml.jackson.module:jackson-module-scala"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/lz4/lz4-java/1.6.0/lz4-java-1.6.0-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/lz4/lz4-java/1.6.0/lz4-java-1.6.0-sources.jar"
+                ],
+                "sha256": "db7727c82c150cec38a422b9692f6431150ea2c0c0d0c723bdf7fe6946149041"
+            },
+            {
                 "coord": "org.mockito:mockito-core:2.24.0",
                 "file": "v1/https/repo1.maven.org/maven2/org/mockito/mockito-core/2.24.0/mockito-core-2.24.0.jar",
                 "directDependencies": [
@@ -8432,6 +9410,44 @@
                     "https://repo1.maven.org/maven2/org/sangria-graphql/sangria_2.12/1.4.2/sangria_2.12-1.4.2-sources.jar"
                 ],
                 "sha256": "e47bff99b1fe6aad9c3dbc672301aae39fa8b35cb69639d57b96c18c76a72064"
+            },
+            {
+                "coord": "org.scala-lang.modules:scala-collection-compat_2.12:2.1.2",
+                "file": "v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.12/2.1.2/scala-collection-compat_2.12-2.1.2.jar",
+                "directDependencies": [
+                    "org.scala-lang:scala-library:2.12.10"
+                ],
+                "dependencies": [
+                    "org.scala-lang:scala-library:2.12.10"
+                ],
+                "exclusions": [
+                    "com.fasterxml.jackson.core:jackson-databind",
+                    "com.fasterxml.jackson.module:jackson-module-scala"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.12/2.1.2/scala-collection-compat_2.12-2.1.2.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.12/2.1.2/scala-collection-compat_2.12-2.1.2.jar"
+                ],
+                "sha256": "8aab3e1f9dd7bc392a2e27cf168af94fdc7cc2752131fc852192302fb21efdb4"
+            },
+            {
+                "coord": "org.scala-lang.modules:scala-collection-compat_2.12:jar:sources:2.1.2",
+                "file": "v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.12/2.1.2/scala-collection-compat_2.12-2.1.2-sources.jar",
+                "directDependencies": [
+                    "org.scala-lang:scala-library:jar:sources:2.12.10"
+                ],
+                "dependencies": [
+                    "org.scala-lang:scala-library:jar:sources:2.12.10"
+                ],
+                "exclusions": [
+                    "com.fasterxml.jackson.core:jackson-databind",
+                    "com.fasterxml.jackson.module:jackson-module-scala"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.12/2.1.2/scala-collection-compat_2.12-2.1.2-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.12/2.1.2/scala-collection-compat_2.12-2.1.2-sources.jar"
+                ],
+                "sha256": "2837767d00002a23888804637c3a43136723cafbd2101ca37ea286e349b9ee14"
             },
             {
                 "coord": "org.scala-lang.modules:scala-java8-compat_2.12:0.9.0",
@@ -12539,6 +13555,52 @@
                 "sha256": "22081ee83810098adc9af4d84d05dd5891d7c0e15f9095bcdaf4ac7a228b92df"
             },
             {
+                "coord": "org.scalatestplus:junit-4-12_2.12:3.1.1.0",
+                "file": "v1/https/repo1.maven.org/maven2/org/scalatestplus/junit-4-12_2.12/3.1.1.0/junit-4-12_2.12-3.1.1.0.jar",
+                "directDependencies": [
+                    "junit:junit:4.12",
+                    "org.scala-lang:scala-library:2.12.10",
+                    "org.scalatest:scalatest_2.12:3.0.5"
+                ],
+                "dependencies": [
+                    "org.scalactic:scalactic_2.12:3.0.5",
+                    "junit:junit:4.12",
+                    "org.hamcrest:hamcrest-core:1.3",
+                    "org.scala-lang:scala-reflect:2.12.8",
+                    "org.scala-lang:scala-library:2.12.10",
+                    "org.scalatest:scalatest_2.12:3.0.5",
+                    "org.scala-lang.modules:scala-xml_2.12:1.0.6"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/scalatestplus/junit-4-12_2.12/3.1.1.0/junit-4-12_2.12-3.1.1.0.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/scalatestplus/junit-4-12_2.12/3.1.1.0/junit-4-12_2.12-3.1.1.0.jar"
+                ],
+                "sha256": "453e9290501403df8eeb89d986870006dba74379c20207c28634c285f358fef6"
+            },
+            {
+                "coord": "org.scalatestplus:junit-4-12_2.12:jar:sources:3.1.1.0",
+                "file": "v1/https/repo1.maven.org/maven2/org/scalatestplus/junit-4-12_2.12/3.1.1.0/junit-4-12_2.12-3.1.1.0-sources.jar",
+                "directDependencies": [
+                    "junit:junit:jar:sources:4.12",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10",
+                    "org.scalatest:scalatest_2.12:jar:sources:3.0.5"
+                ],
+                "dependencies": [
+                    "org.scala-lang:scala-reflect:jar:sources:2.12.8",
+                    "org.scala-lang:scala-library:jar:sources:2.12.10",
+                    "org.scalactic:scalactic_2.12:jar:sources:3.0.5",
+                    "org.hamcrest:hamcrest-core:jar:sources:1.3",
+                    "org.scala-lang.modules:scala-xml_2.12:jar:sources:1.0.6",
+                    "org.scalatest:scalatest_2.12:jar:sources:3.0.5",
+                    "junit:junit:jar:sources:4.12"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/scalatestplus/junit-4-12_2.12/3.1.1.0/junit-4-12_2.12-3.1.1.0-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/scalatestplus/junit-4-12_2.12/3.1.1.0/junit-4-12_2.12-3.1.1.0-sources.jar"
+                ],
+                "sha256": "e021b4cbede51aa66ac2543c4eaa59dee530260fa11b448d2c598953a738b71f"
+            },
+            {
                 "coord": "org.scalaz:scalaz-concurrent_2.12:7.2.24",
                 "file": "v1/https/repo1.maven.org/maven2/org/scalaz/scalaz-concurrent_2.12/7.2.24/scalaz-concurrent_2.12-7.2.24.jar",
                 "directDependencies": [
@@ -13586,11 +14648,11 @@
                 "coord": "org.skyscreamer:jsonassert:1.1.1",
                 "file": "v1/https/repo1.maven.org/maven2/org/skyscreamer/jsonassert/1.1.1/jsonassert-1.1.1.jar",
                 "directDependencies": [
-                    "commons-collections:commons-collections:3.0",
+                    "commons-collections:commons-collections:3.2.1",
                     "org.json:json:20090211"
                 ],
                 "dependencies": [
-                    "commons-collections:commons-collections:3.0",
+                    "commons-collections:commons-collections:3.2.1",
                     "org.json:json:20090211"
                 ],
                 "url": "https://repo1.maven.org/maven2/org/skyscreamer/jsonassert/1.1.1/jsonassert-1.1.1.jar",
@@ -13603,12 +14665,12 @@
                 "coord": "org.skyscreamer:jsonassert:jar:sources:1.1.1",
                 "file": "v1/https/repo1.maven.org/maven2/org/skyscreamer/jsonassert/1.1.1/jsonassert-1.1.1-sources.jar",
                 "directDependencies": [
-                    "commons-collections:commons-collections:jar:sources:3.0",
+                    "commons-collections:commons-collections:jar:sources:3.2.1",
                     "org.json:json:jar:sources:20090211"
                 ],
                 "dependencies": [
-                    "commons-collections:commons-collections:jar:sources:3.0",
-                    "org.json:json:jar:sources:20090211"
+                    "org.json:json:jar:sources:20090211",
+                    "commons-collections:commons-collections:jar:sources:3.2.1"
                 ],
                 "url": "https://repo1.maven.org/maven2/org/skyscreamer/jsonassert/1.1.1/jsonassert-1.1.1-sources.jar",
                 "mirror_urls": [
@@ -14341,6 +15403,28 @@
                 "sha256": "90582e3442a460a6708114132e2794d096d2aa72c4d79898a1a5579438ce6684"
             },
             {
+                "coord": "org.tukaani:xz:1.5",
+                "file": "v1/https/repo1.maven.org/maven2/org/tukaani/xz/1.5/xz-1.5.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://repo1.maven.org/maven2/org/tukaani/xz/1.5/xz-1.5.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/tukaani/xz/1.5/xz-1.5.jar"
+                ],
+                "sha256": "86f30fa8775fa3a62cdb39d1ed78a6019164c1058864048d42cbee244e26e840"
+            },
+            {
+                "coord": "org.tukaani:xz:jar:sources:1.5",
+                "file": "v1/https/repo1.maven.org/maven2/org/tukaani/xz/1.5/xz-1.5-sources.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://repo1.maven.org/maven2/org/tukaani/xz/1.5/xz-1.5-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/tukaani/xz/1.5/xz-1.5-sources.jar"
+                ],
+                "sha256": "c9ec28552dad5c2346cdc0df14688945971073fbbb01f63a8c64ded51d61d636"
+            },
+            {
                 "coord": "org.typelevel:cats-core_2.12:1.4.0",
                 "file": "v1/https/repo1.maven.org/maven2/org/typelevel/cats-core_2.12/1.4.0/cats-core_2.12-1.4.0.jar",
                 "directDependencies": [
@@ -14671,6 +15755,58 @@
                 "sha256": "e15236770b2409de1fac08767b99fa2e7f33b6e71a9824d52dba5cbf19053e7e"
             },
             {
+                "coord": "org.xerial.snappy:snappy-java:1.1.7.3",
+                "file": "v1/https/repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "exclusions": [
+                    "com.fasterxml.jackson.core:jackson-databind",
+                    "com.fasterxml.jackson.module:jackson-module-scala"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3.jar"
+                ],
+                "sha256": "7eea31c0a25d35cd092d8aec08bed04f22152409b58d63d43839074a9ab7ab97"
+            },
+            {
+                "coord": "org.xerial.snappy:snappy-java:1.1.7.3",
+                "file": "v1/https/repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3.jar"
+                ],
+                "sha256": "7eea31c0a25d35cd092d8aec08bed04f22152409b58d63d43839074a9ab7ab97"
+            },
+            {
+                "coord": "org.xerial.snappy:snappy-java:jar:sources:1.1.7.3",
+                "file": "v1/https/repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3-sources.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "exclusions": [
+                    "com.fasterxml.jackson.core:jackson-databind",
+                    "com.fasterxml.jackson.module:jackson-module-scala"
+                ],
+                "url": "https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3-sources.jar"
+                ],
+                "sha256": "08398a9fc461f267ecb58af61cc2b98ddb470c00cb6fb39b88c745f38cd33803"
+            },
+            {
+                "coord": "org.xerial.snappy:snappy-java:jar:sources:1.1.7.3",
+                "file": "v1/https/repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3-sources.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3-sources.jar",
+                "mirror_urls": [
+                    "https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3-sources.jar"
+                ],
+                "sha256": "08398a9fc461f267ecb58af61cc2b98ddb470c00cb6fb39b88c745f38cd33803"
+            },
+            {
                 "coord": "org.xerial:sqlite-jdbc:3.30.1",
                 "file": "v1/https/repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.30.1/sqlite-jdbc-3.30.1.jar",
                 "directDependencies": [],
@@ -14779,7 +15915,7 @@
                 ],
                 "dependencies": [
                     "org.hamcrest:hamcrest-core:1.3",
-                    "commons-collections:commons-collections:3.0",
+                    "commons-collections:commons-collections:3.2.1",
                     "org.json:json:20090211",
                     "org.skyscreamer:jsonassert:1.1.1"
                 ],
@@ -14797,9 +15933,9 @@
                     "org.skyscreamer:jsonassert:jar:sources:1.1.1"
                 ],
                 "dependencies": [
-                    "commons-collections:commons-collections:jar:sources:3.0",
                     "org.json:json:jar:sources:20090211",
                     "org.hamcrest:hamcrest-core:jar:sources:1.3",
+                    "commons-collections:commons-collections:jar:sources:3.2.1",
                     "org.skyscreamer:jsonassert:jar:sources:1.1.1"
                 ],
                 "url": "https://repo1.maven.org/maven2/uk/co/datumedge/hamcrest-json/0.2/hamcrest-json-0.2-sources.jar",
@@ -14810,6 +15946,6 @@
             }
         ],
         "version": "0.1.0",
-        "__AUTOGENERATED_FILE_DO_NOT_MODIFY_THIS_FILE_MANUALLY": -1616658845
+        "__AUTOGENERATED_FILE_DO_NOT_MODIFY_THIS_FILE_MANUALLY": 2094076186
     }
 }

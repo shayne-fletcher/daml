@@ -5,10 +5,19 @@ load(
     "da_scala_test",
 )
 
+da_scala_library(
+  name = "akka-quickstart-scala-lib",
+  srcs = glob(["src/main/scala/**/*.scala"]),
+  deps = [
+    "@maven//:com_typesafe_akka_akka_actor_2_12",
+    "@maven//:com_typesafe_akka_akka_actor_typed_2_12",
+    "@maven//:org_slf4j_slf4j_api",
+  ],
+)
+
 da_scala_binary(
-    name = "akka-quickstart-scala",
+    name = "akka-quickstart-scala-exe",
     main_class = "com.example.AkkaQuickstart",
-    srcs = glob(["src/main/scala/**/*.scala"]),
     tags = [],
     visibility = ["//visibility:public"],
     runtime_deps = [
@@ -17,9 +26,24 @@ da_scala_binary(
         "@maven//:com_typesafe_akka_akka_slf4j_2_12",
     ],
     deps = [
-      "@maven//:com_typesafe_akka_akka_actor_2_12",
-      "@maven//:com_typesafe_akka_akka_actor_typed_2_12",
-      "@maven//:org_slf4j_slf4j_api",
+      ":akka-quickstart-scala-lib"
     ],
 )
 
+da_scala_test(
+  name = "akka-quickstart-scala-test",
+  srcs = glob(["src/test/scala/**/*.scala"]),
+  deps = [
+    "@maven//:com_typesafe_akka_akka_actor_testkit_typed_2_12",
+    "@maven//:org_scala_lang_scala_library",
+    "@maven//:com_typesafe_akka_akka_actor_typed_2_12",
+    "@maven//:com_typesafe_akka_akka_slf4j_2_12",
+    "@maven//:com_typesafe_akka_akka_testkit_2_12",
+    "@maven//:com_github_ghik_silencer_lib_2_12",
+    "@maven//:ch_qos_logback_logback_classic",
+    "@maven//:junit_junit",
+    "@maven//:org_scalatest_scalatest_2_12",
+    "@maven//:org_scalatestplus_junit_4_12_2_12",
+    ":akka-quickstart-scala-lib",
+  ],  
+)
