@@ -1,0 +1,25 @@
+load(
+    "//bazel_tools:scala.bzl",
+    "da_scala_binary",
+    "da_scala_library",
+    "da_scala_test",
+)
+
+da_scala_binary(
+    name = "akka-quickstart-scala",
+    main_class = "com.example.AkkaQuickstart",
+    srcs = glob(["src/main/scala/**/*.scala"]),
+    tags = [],
+    visibility = ["//visibility:public"],
+    runtime_deps = [
+        "@maven//:ch_qos_logback_logback_classic",
+        "@maven//:ch_qos_logback_logback_core",
+        "@maven//:com_typesafe_akka_akka_slf4j_2_12",
+    ],
+    deps = [
+      "@maven//:com_typesafe_akka_akka_actor_2_12",
+      "@maven//:com_typesafe_akka_akka_actor_typed_2_12",
+      "@maven//:org_slf4j_slf4j_api",
+    ],
+)
+
