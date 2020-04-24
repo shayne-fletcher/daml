@@ -109,14 +109,28 @@ class DeviceGroup(context: ActorContext[DeviceGroup.Command], groupId: String)
           case None =>
             context.log.info("Creating device actor for {}", trackMsg.deviceId)
             val deviceActor = context.spawn(Device(groupId, deviceId), s"device-$deviceId")
+            context.watchWith(deviceActor, DeviceTerminated(deviceActor, groupId, deviceId))
             deviceIdToActor += deviceId -> deviceActor
             replyTo ! DeviceRegistered(deviceActor)
         }
         this
 
+      case RequestDeviceList(requestId, gId, replyTo) =>
+        if (gId == groupId) {
+          replyTo ! ReplyDeviceList(requestId, deviceIdToActor.keySet)
+          this
+        } else
+          Behaviors.unhandled
+
       case RequestTrackDevice(gId, _, _) =>
         context.log.warn2("Ignoring TrackDevice request for {}. This actor is responsible for {}.", gId, groupId)
         this
+
+      case DeviceTerminated(_, _, deviceId) =>
+        context.log.info("Device actor for {} has been terminated", deviceId)
+        deviceIdToActor -= deviceId
+        this
+
     }
 
   override def onSignal: PartialFunction[Signal, Behavior[Command]] = {
