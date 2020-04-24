@@ -40,7 +40,7 @@ common_scalacopts = [
     "-Xfuture",
     # better error reporting for pureconfig
     "-Xmacro-settings:materialize-derivations",
-    "-Xfatal-warnings",
+    #"-Xfatal-warnings",
     # catch missing string interpolators
     "-Xlint:missing-interpolator",
     # adapted args is a deprecated feature:
@@ -52,7 +52,7 @@ common_scalacopts = [
     "-Ywarn-numeric-widen",
     # Gives a warning for functions declared as returning Unit, but the body returns a value
     "-Ywarn-value-discard",
-    "-Ywarn-unused-import",
+    #"-Ywarn-unused-import",
     # unfortunately give false warning for the `(a, b) = someTuple`
     # line inside a for comprehension
     # "-Ywarn-unused"
