@@ -80,6 +80,19 @@ da_scala_binary(
     ],
 )
 
+da_scala_binary(
+    name = "chat-room-demo",
+    main_class = "com.example.ChatRoomDemo",
+    tags = [],
+    visibility = ["//visibility:public"],
+    runtime_deps = [
+      "@maven//:ch_qos_logback_logback_classic",
+    ],
+    deps = [
+      ":akka-quickstart-scala-lib"
+    ],
+)
+
 da_scala_test(
   name = "akka-quickstart-scala-test",
   srcs = glob(["src/test/scala/**/*.scala"]),

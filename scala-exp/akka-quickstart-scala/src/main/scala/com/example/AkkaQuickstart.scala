@@ -6,7 +6,6 @@ import akka.actor.typed.ActorRef
 import akka.actor.typed.ActorSystem
 import akka.actor.typed.Behavior
 import akka.actor.typed.scaladsl.Behaviors
-import com.example.GreeterMain.SayHello
 
 //#greeter-actor
 object Greeter {
@@ -68,6 +67,7 @@ object GreeterMain {
 
 //#main-class
 object AkkaQuickstart extends App {
+  import GreeterMain.SayHello
   //#actor-system
   val greeterMain: ActorSystem[GreeterMain.SayHello] = ActorSystem(GreeterMain(), "AkkaQuickStart")
   //#actor-system
