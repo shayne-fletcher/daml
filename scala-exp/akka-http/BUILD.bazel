@@ -1,0 +1,44 @@
+load(
+    "//bazel_tools:scala.bzl",
+    "da_scala_binary",
+    "da_scala_library",
+    "da_scala_test",
+)
+
+da_scala_library(
+  name = "http-lib",
+  srcs = glob(["src/main/scala/**/*.scala"]),
+  deps = [
+#    "@maven//:com_typesafe_akka_akka_actor_typed_2_12",
+    "@maven//:com_typesafe_akka_akka_actor_2_12",
+    "@maven//:com_typesafe_akka_akka_http_2_12",
+    "@maven//:com_typesafe_akka_akka_http_core_2_12",
+    "@maven//:com_typesafe_akka_akka_http_spray_json_2_12",
+    "@maven//:com_typesafe_akka_akka_stream_2_12",
+    "@maven//:io_spray_spray_json_2_12",
+  ],
+)
+
+da_scala_binary(
+    name = "web-server-exe",
+    main_class = "com.example.WebServer",
+    tags = [],
+    visibility = ["//visibility:public"],
+    runtime_deps = [
+    ],
+    deps = [
+      ":http-lib"
+    ],
+)
+
+da_scala_binary(
+    name = "bid-server-exe",
+    main_class = "com.example.BidServer",
+    tags = [],
+    visibility = ["//visibility:public"],
+    runtime_deps = [
+    ],
+    deps = [
+      ":http-lib"
+    ],
+)
